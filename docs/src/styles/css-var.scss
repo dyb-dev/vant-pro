@@ -1,0 +1,27 @@
+/*
+ * @Author: dyb-dev
+ * @Date: 2024-04-29 20:37:35
+ * @LastEditors: dyb-dev
+ * @LastEditTime: 2024-09-01 23:31:58
+ * @FilePath: /vant-pro/docs/src/styles/css-var.scss
+ * @Description: css全局变量文件
+ */
+
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-background: var(--color-white);
+    --color-text: var(--color-black);
+
+    /* IOS 顶部和底部 安全区域 支持IOS 11.2 及以上的系统版本 */
+    --safe-area-height-top: env(safe-area-inset-top);
+    --safe-area-height-bottom: env(safe-area-inset-bottom);
+}
+
+/** 检测用户系统的偏好主题模式是否为暗色模式（Dark Mode） */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: var(--color-black);
+        --color-text: var(--color-white);
+    }
+}

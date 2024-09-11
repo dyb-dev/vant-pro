@@ -1,0 +1,112 @@
+{
+    "name": "vant-pro",
+    "version": "0.0.1",
+    "description": "基于 Vue3 + TS + Vant 二次封装的移动端组件库",
+    "author": "dyb-dev",
+    "license": "MIT",
+    "type": "module",
+    "private": false,
+    "main": "./dist/cjs/index.cjs",
+    "module": "./dist/es/index.mjs",
+    "unpkg": "./dist/umd/index.js",
+    "jsdelivr": "./dist/umd/index.js",
+    "types": "./dist/types/index.d.ts",
+    "style": "./dist/style.css",
+    "exports": {
+        ".": {
+            "import": "./dist/es/index.mjs",
+            "require": "./dist/cjs/index.cjs",
+            "umd": "./dist/umd/index.js",
+            "types": "./dist/types/index.d.ts",
+            "style": "./dist/style.css"
+        }
+    },
+    "files": [
+        "dist",
+        "package.json",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "vite build",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "npm run docs:ts-check & npm run docs:build-only",
+        "docs:build-only": "vitepress build docs",
+        "docs:preview": "vitepress preview docs",
+        "docs:ts-check": "vue-tsc --build --force"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "pnpm": ">=8.15.5"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "ignoreMissing": [
+                "@algolia/client-search",
+                "search-insights"
+            ]
+        }
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dyb-dev/vant-pro"
+    },
+    "homepage": "https://github.com/dyb-dev/vant-pro",
+    "bugs": {
+        "url": "https://github.com/dyb-dev/vant-pro/issues",
+        "directory": "https://github.com/dyb-dev/vant-pro"
+    },
+    "keywords": [
+        "component",
+        "components",
+        "vue",
+        "vue3",
+        "vant"
+    ],
+    "devDependencies": {
+        "@ant-design/icons-vue": "^7.0.1",
+        "@dyb-dev/eslint-config": "^0.1.0",
+        "@dyb-dev/prettier-config": "^0.0.5",
+        "@dyb-dev/stylelint-config": "^0.0.5",
+        "@dyb-dev/ts-config": "^0.0.6",
+        "@vant/area-data": "^1.5.2",
+        "@vitejs/plugin-vue": "^5.1.3",
+        "@vitepress-demo-preview/component": "^2.3.2",
+        "@vitepress-demo-preview/plugin": "^1.2.3",
+        "@vueuse/core": "^11.0.3",
+        "ant-design-vue": "^4.2.3",
+        "dayjs": "^1.11.12",
+        "eslint": "^8.57.0",
+        "lunar-javascript": "^1.6.12",
+        "portfinder-sync": "^0.0.2",
+        "prettier": "^3.3.2",
+        "prettier-eslint": "^16.3.0",
+        "sass": "^1.75.0",
+        "stylelint": "^16.3.1",
+        "typescript": "^5.4.5",
+        "vant": "^4.9.4",
+        "vconsole": "^3.15.1",
+        "vite": "^5.3.3",
+        "vite-plugin-dts": "~4.0.3",
+        "vite-plugin-mkcert": "^1.17.5",
+        "vite-plugin-pwa": "^0.20.1",
+        "vitepress": "^1.2.3",
+        "vue": "~3.4.30",
+        "vue-tsc": "^2.0.26",
+        "vue3-json-viewer": "^2.2.2",
+        "workbox-cacheable-response": "^7.1.0",
+        "workbox-core": "^7.1.0",
+        "workbox-precaching": "^7.1.0",
+        "workbox-routing": "^7.1.0",
+        "workbox-strategies": "^7.1.0",
+        "workbox-window": "^7.1.0"
+    },
+    "peerDependencies": {
+        "vue": "^3.4.30",
+        "vant": "^4.9.4",
+        "@vueuse/core": "^11.0.3"
+    }
+}
