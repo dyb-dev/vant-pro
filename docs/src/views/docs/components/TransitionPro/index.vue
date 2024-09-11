@@ -3,7 +3,7 @@ import { App, Button, Space } from "ant-design-vue"
 import { Image } from "vant"
 import { computed, ref } from "vue"
 
-import { TransitionPro } from "vant-pro"
+import { TransitionPro } from "@dyb-dev/vant-pro"
 
 import CellPhoneBox from "@/components/CellPhoneBox.vue"
 

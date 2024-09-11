@@ -40,7 +40,7 @@ const app = createApp()
 
 ```shell
 # 当然你也可以通过 npm、yarn 或 bun 进行安装
-pnpm i vant-pro
+pnpm i @dyb-dev/vant-pro
 ```
 
 ## 组件用法
@@ -54,9 +54,9 @@ vant-pro 支持多种组件注册方式，下面是使用 vant-pro 组件的用�
 ```ts
 import { createApp } from "vue"
 // 1. 引入 `ListPro` 组件
-import { ListPro } from "vant-pro"
+import { ListPro } from "@dyb-dev/vant-pro"
 // 2. 引入 vant-pro 组件库样式
-import "vant-pro/style.css"
+import "@dyb-dev/vant-pro/style.css"
 
 const app = createApp()
 
@@ -76,9 +76,9 @@ app.component(ListPro.name, ListPro)
 ```ts
 import { createApp } from "vue"
 // 1. 引入全部组件
-import VantPro from "vant-pro"
+import VantPro from "@dyb-dev/vant-pro"
 // 2. 引入 vant-pro 组件库样式
-import "vant-pro/style.css"
+import "@dyb-dev/vant-pro/style.css"
 
 const app = createApp()
 
@@ -95,7 +95,7 @@ app.use(VantPro)
 局部注册后，你可以在当前组件中使用注册的 vant-pro 组件。
 
 ```ts
-import { ListPro } from "vant-pro"
+import { ListPro } from "@dyb-dev/vant-pro"
 
 export default {
     components: {
@@ -110,7 +110,7 @@ export default {
 
 ```vue
 <script setup>
-import { ListPro } from "vant-pro"
+import { ListPro } from "@dyb-dev/vant-pro"
 </script>
 
 <template>
@@ -123,7 +123,7 @@ import { ListPro } from "vant-pro"
 在 JSX 和 TSX 中可以直接使用 vant-pro 组件，不需要进行组件注册。
 
 ```tsx
-import { ListPro } from "vant-pro"
+import { ListPro } from "@dyb-dev/vant-pro"
 
 export default {
     render() {
@@ -153,17 +153,17 @@ vant-pro 还提供了实现函数式调用的基础方法:
 导出以下相关类型定义:
 
 ```ts
-import type { IDefaultOptions, TFilteredDefaultOptions } from "vant-pro"
+import type { IDefaultOptions, TFilteredDefaultOptions } from "@dyb-dev/vant-pro"
 ```
 
 ::: code-group
 
 ```ts [代码示例]
-import { mountComponent } from "vant-pro"
+import { mountComponent } from "@dyb-dev/vant-pro"
 
 import Component from "./component.vue"
 
-import type { TFilteredDefaultOptions } from "vant-pro"
+import type { TFilteredDefaultOptions } from "@dyb-dev/vant-pro"
 import type { IComponentProps, IComponentResult } from "./component.vue"
 
 /** 过滤掉 `show` 和 `unmount` Props  */

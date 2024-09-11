@@ -16,7 +16,7 @@
 
 ```ts
 import { createApp } from "vue"
-import { ListPro } from "vant-pro"
+import { ListPro } from "@dyb-dev/vant-pro"
 
 const app = createApp()
 app.use(ListPro)
@@ -27,7 +27,7 @@ app.use(ListPro)
 `usePagination`、`useListPagination` 是内部使用的分页逻辑 Hook，如果需要使用它，只需引入即可
 
 ```ts
-import { usePagination, useListPagination } from "vant-pro"
+import { usePagination, useListPagination } from "@dyb-dev/vant-pro"
 ```
 
 同时，也可以引入与分页相关的类型：
@@ -45,7 +45,7 @@ import type {
     IUsePaginationReturn,
     IUseListPaginationOptions,
     IUseListPaginationReturn
-} from "vant-pro"
+} from "@dyb-dev/vant-pro"
 ```
 
 ## 代码演示
@@ -103,7 +103,7 @@ ListPro 下拉刷新只在移动端正常使用
 组件导出以下类型定义：
 
 ```ts
-import type { TPullRefreshProps, TListProps, THighlightProps, IListProProps } from "vant-pro"
+import type { TPullRefreshProps, TListProps, THighlightProps, IListProProps } from "@dyb-dev/vant-pro"
 ```
 
 ## 主题定制

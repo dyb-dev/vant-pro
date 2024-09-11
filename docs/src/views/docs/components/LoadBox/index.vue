@@ -3,12 +3,12 @@ import { App, Button, Space } from "ant-design-vue"
 import { Image } from "vant"
 import { reactive } from "vue"
 
-import { LoadBox } from "vant-pro"
+import { LoadBox } from "@dyb-dev/vant-pro"
 
 import CellPhoneBox from "@/components/CellPhoneBox.vue"
 import JsonViewer from "@/components/JsonViewer.vue"
 
-import type { TLoadBoxStatus } from "vant-pro"
+import type { TLoadBoxStatus } from "@dyb-dev/vant-pro"
 
 interface IData {
     /** 加载状态 */

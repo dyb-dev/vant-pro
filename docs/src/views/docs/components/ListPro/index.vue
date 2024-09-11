@@ -3,12 +3,12 @@ import { App, Space } from "ant-design-vue"
 import { Cell } from "vant"
 import { ref } from "vue"
 
-import { ListPro } from "vant-pro"
+import { ListPro } from "@dyb-dev/vant-pro"
 
 import CellPhoneBox from "@/components/CellPhoneBox.vue"
 import JsonViewer from "@/components/JsonViewer.vue"
 
-import type { IPaginationFetchDataFnParam, TPaginationFetchDataFnReturn } from "vant-pro"
+import type { IPaginationFetchDataFnParam, TPaginationFetchDataFnReturn } from "@dyb-dev/vant-pro"
 
 /** REF: 列表组件实例 */
 const listPro = ref<InstanceType<typeof ListPro> | Record<string, any>>({})

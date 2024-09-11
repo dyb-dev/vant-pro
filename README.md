@@ -54,7 +54,7 @@ const app = createApp()
 
 ```shell
 # 当然你也可以通过 npm、yarn 或 bun 进行安装
-pnpm i vant-pro
+pnpm i @dyb-dev/vant-pro
 ```
 
 ## 快速上手
@@ -62,9 +62,9 @@ pnpm i vant-pro
 ```ts
 import { createApp } from "vue"
 // 1. 引入 `ListPro` 组件
-import { ListPro } from "vant-pro"
+import { ListPro } from "@dyb-dev/vant-pro"
 // 2. 引入 vant-pro 组件库样式
-import "vant-pro/style.css"
+import "@dyb-dev/vant-pro/style.css"
 
 const app = createApp()
 

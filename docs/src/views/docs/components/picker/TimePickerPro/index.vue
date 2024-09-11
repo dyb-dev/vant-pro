@@ -3,12 +3,12 @@ import { App, Button, Space } from "ant-design-vue"
 import dayjs from "dayjs"
 import { reactive, ref } from "vue"
 
-import { showTimePickerPro, TimePickerPro } from "vant-pro"
+import { showTimePickerPro, TimePickerPro } from "@dyb-dev/vant-pro"
 
 import CellPhoneBox from "@/components/CellPhoneBox.vue"
 import JsonViewer from "@/components/JsonViewer.vue"
 
-import type { TPickerProBaseSelectedResult } from "vant-pro"
+import type { TPickerProBaseSelectedResult } from "@dyb-dev/vant-pro"
 
 interface IData {
     /** 当前选择器值 */

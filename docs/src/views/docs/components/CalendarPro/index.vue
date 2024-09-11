@@ -2,12 +2,12 @@
 import { App, Button, Space } from "ant-design-vue"
 import { reactive, ref } from "vue"
 
-import { CalendarPro, showCalendarPro } from "vant-pro"
+import { CalendarPro, showCalendarPro } from "@dyb-dev/vant-pro"
 
 import CellPhoneBox from "@/components/CellPhoneBox.vue"
 import JsonViewer from "@/components/JsonViewer.vue"
 
-import type { TCalendarProSelectDate } from "vant-pro"
+import type { TCalendarProSelectDate } from "@dyb-dev/vant-pro"
 
 interface IData {
     selectDate: TCalendarProSelectDate

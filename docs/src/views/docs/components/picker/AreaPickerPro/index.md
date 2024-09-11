@@ -14,7 +14,7 @@
 
 ```ts
 import { createApp } from "vue"
-import { AreaPickerPro } from "vant-pro"
+import { AreaPickerPro } from "@dyb-dev/vant-pro"
 
 const app = createApp()
 app.use(AreaPickerPro)
@@ -109,7 +109,7 @@ import type {
     IAreaPickerProProps,
     TShowAreaPickerProOptions,
     TShowAreaPickerProResult
-} from "vant-pro"
+} from "@dyb-dev/vant-pro"
 ```
 
 ## 主题定制

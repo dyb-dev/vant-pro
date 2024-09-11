@@ -13,7 +13,7 @@
 
 ```ts
 import { createApp } from "vue"
-import { CalendarPro } from "vant-pro"
+import { CalendarPro } from "@dyb-dev/vant-pro"
 
 const app = createApp()
 app.use(CalendarPro)
@@ -149,7 +149,7 @@ import type {
     ICalendarProProps,
     TShowCalendarProOptions,
     TShowCalendarProResult
-} from "vant-pro"
+} from "@dyb-dev/vant-pro"
 ```
 
 ## 主题定制

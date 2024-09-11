@@ -14,7 +14,7 @@
 
 ```ts
 import { createApp } from "vue"
-import { DatePickerPro } from "vant-pro"
+import { DatePickerPro } from "@dyb-dev/vant-pro"
 
 const app = createApp()
 app.use(DatePickerPro)
@@ -93,7 +93,7 @@ vant-pro 中导出了 DatePickerPro 相关的辅助函数:
 组件导出以下类型定义：
 
 ```ts
-import type { IDatePickerProProps, TShowDatePickerProOptions } from "vant-pro"
+import type { IDatePickerProProps, TShowDatePickerProOptions } from "@dyb-dev/vant-pro"
 ```
 
 ## 主题定制

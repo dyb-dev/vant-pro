@@ -14,7 +14,7 @@
 
 ```ts
 import { createApp } from "vue"
-import { TimePickerPro } from "vant-pro"
+import { TimePickerPro } from "@dyb-dev/vant-pro"
 
 const app = createApp()
 app.use(TimePickerPro)
@@ -105,7 +105,7 @@ vant-pro 中导出了 TimePickerPro 相关的辅助函数:
 组件导出以下类型定义：
 
 ```ts
-import type { ITimePickerProProps, TShowTimePickerProOptions } from "vant-pro"
+import type { ITimePickerProProps, TShowTimePickerProOptions } from "@dyb-dev/vant-pro"
 ```
 
 ## 主题定制

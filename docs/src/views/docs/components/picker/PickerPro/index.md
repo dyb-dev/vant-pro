@@ -16,7 +16,7 @@
 
 ```ts
 import { createApp } from "vue"
-import { PickerPro } from "vant-pro"
+import { PickerPro } from "@dyb-dev/vant-pro"
 
 const app = createApp()
 app.use(PickerPro)
@@ -107,7 +107,7 @@ import type {
     TPickerProFetchDataFnReturn,
     IPickerProProps,
     TShowPickerProOptions
-} from "vant-pro"
+} from "@dyb-dev/vant-pro"
 ```
 
 ## 主题定制

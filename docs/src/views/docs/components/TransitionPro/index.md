@@ -13,7 +13,7 @@
 
 ```ts
 import { createApp } from "vue"
-import { TransitionPro } from "vant-pro"
+import { TransitionPro } from "@dyb-dev/vant-pro"
 
 const app = createApp()
 app.use(TransitionPro)
@@ -46,5 +46,5 @@ app.use(TransitionPro)
 组件导出以下类型定义：
 
 ```ts
-import type { TTransitionProEasing, ITransitionProProps } from "vant-pro"
+import type { TTransitionProEasing, ITransitionProProps } from "@dyb-dev/vant-pro"
 ```

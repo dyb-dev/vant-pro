@@ -13,7 +13,7 @@
 
 ```ts
 import { createApp } from "vue"
-import { LoadBox } from "vant-pro"
+import { LoadBox } from "@dyb-dev/vant-pro"
 
 const app = createApp()
 app.use(LoadBox)
@@ -54,7 +54,7 @@ app.use(LoadBox)
 组件导出以下类型定义：
 
 ```ts
-import type { TLoadBoxStatus, ILoadBoxProps } from "vant-pro"
+import type { TLoadBoxStatus, ILoadBoxProps } from "@dyb-dev/vant-pro"
 ```
 
 ## 主题定制

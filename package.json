@@ -1,5 +1,5 @@
 {
-    "name": "vant-pro",
+    "name": "@dyb-dev/vant-pro",
     "version": "0.0.1",
     "description": "基于 Vue3 + TS + Vant 二次封装的移动端组件库",
     "author": "dyb-dev",
