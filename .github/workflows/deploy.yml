@@ -35,16 +35,15 @@ jobs:
     runs-on: ubuntu-latest
     # 设置 `build` 工作的具体步骤
     steps:
-        # 步骤名（自定义命名）
+      # 步骤名（自定义命名）
       - name: Checkout
         # 指定使用 GitHub 官方提供的一个 Action来执行某个任务，`@v4` 表示使用的版本
         uses: actions/checkout@v4
-        # 用于为 uses 指定的 action 提供额外的输入参数或配置选项
         with:
           # 指定要拉取的提交历史的深度，0 表示拉取完整的提交历史，如果未启用 lastUpdated，则不需要
           fetch-depth: 0
 
-        # 如果不使用 pnpm 可以删除该步骤
+      # 如果不使用 pnpm 可以删除该步骤
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
@@ -63,6 +62,10 @@ jobs:
       - name: Install dependencies
         # 或 npm install / yarn install / bun install
         run: pnpm install
+
+      - name: Build component library
+        # 或 npm run build / yarn build / bun run build
+        run: pnpm build
 
       - name: Build with VitePress
         # 或 npm run build / yarn build / bun run build
