@@ -46,12 +46,9 @@ import "vant/lib/index.css"
 const app = createApp()
 ```
 
-**注意:**
+**⚠️注意:**
 
-<div style="border-left: 4px solid #f39c12; background-color: rgba(234, 179, 8, 0.14); padding: 10px;">
-  如果 vant 的样式为按需加载的，那么会造成组件无法正常使用，这是由于当你在使用按需加载时，使用 vant-pro 的组件并不会去自动引入其内部 vant 组件的样式文件。
-</div>
-<br>
+如果 vant 的样式为按需加载的，那么会造成组件无法正常使用，这是由于当你在使用按需加载时，使用 vant-pro 的组件并不会去自动引入其内部 vant 组件的样式文件。
 
 前置条件完成后，可以通过 pnpm 进行安装:
 
