@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 23:20:04
+ * @LastEditTime: 2024-09-12 00:10:40
  * @FilePath: /vant-pro/docs/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -62,6 +62,9 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
     /** STATIC: logo路径 需要加版本号保证PWA模式下正常离线缓存 */
     const _logoPath = `/image/logo.png?version=${__PROJECT_INFO__.version}`
 
+    /** STATIC: favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
+    const _faviconPath = `/image/favicon.ico?version=${__PROJECT_INFO__.version}`
+
     /** STATIC: 端口号 */
     const _port = getPort(~~VITE_PORT)
 
@@ -95,8 +98,8 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                 "link",
                 {
                     rel: "icon",
-                    type: "image/png",
-                    href: _logoPath
+                    type: "image/x-icon",
+                    href: _faviconPath
                 }
             ]
         ],

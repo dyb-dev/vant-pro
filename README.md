@@ -77,15 +77,11 @@ app.use(ListPro)
 app.component(ListPro.name, ListPro)
 ```
 
-<!-- TODO: 修改 -->
-
-更多内容请参阅[快速上手](http://192.168.10.194:8080/docs/quickstart/)。
+更多内容请参阅[快速上手](https://dyb-dev.github.io/vant-pro/docs/quickstart/)。
 
 ## 链接
 
-<!-- TODO: 修改 -->
-
--   [文档](http://192.168.10.194:8080/)
+-   [文档](https://dyb-dev.github.io/vant-pro/)
 
 ## 开源协议
 
