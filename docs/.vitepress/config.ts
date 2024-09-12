@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-12 15:41:21
+ * @LastEditTime: 2024-09-12 16:05:41
  * @FilePath: /vant-pro/docs/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -65,8 +65,11 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
     /** STATIC: logo路径 需要加版本号保证PWA模式下正常离线缓存 */
     const _logoPath = `/image/logo.png${_query}`
 
+    /** STATIC: 图标路径前缀 */
+    const _faviconPathPrefix = isDevMode ? "" : VITE_PROJECT_ASSETS_DIR_PREFIX
+
     /** STATIC: favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
-    const _faviconPath = `${isDevMode ? "" : VITE_PROJECT_ASSETS_DIR_PREFIX}/image/favicon.ico${_query}`
+    const _faviconPath = `${_faviconPathPrefix}/image/favicon.ico${_query}`
 
     /** STATIC: 端口号 */
     const _port = getPort(~~VITE_PORT)
