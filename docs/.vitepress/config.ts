@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-12 00:10:40
+ * @LastEditTime: 2024-09-12 15:25:04
  * @FilePath: /vant-pro/docs/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -18,7 +18,7 @@ import { repository } from "../../package.json"
 import { docsSidebar } from "../src/views/docs"
 import { referenceSidebar } from "../src/views/reference"
 
-import { generateProjectInfo, getAvailableIPv4HostIP, setupVitePWAPlugin } from "./utils"
+import { generateProjectInfo, getAvailableIPv4HostIP, getRemoteRepositoryName, setupVitePWAPlugin } from "./utils"
 
 import type { UserConfigFn, DefaultTheme } from "vitepress"
 
@@ -59,11 +59,17 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
     /** STATIC: 项目信息 */
     const __PROJECT_INFO__ = generateProjectInfo(_env)
 
+    /** STATIC: 路径参数 */
+    const _query = `?version=${__PROJECT_INFO__.version}`
+
     /** STATIC: logo路径 需要加版本号保证PWA模式下正常离线缓存 */
-    const _logoPath = `/image/logo.png?version=${__PROJECT_INFO__.version}`
+    const _logoPath = `/image/logo.png${_query}`
+
+    /** STATIC: favicon路径前缀 */
+    const _faviconPathPrefix = isDevMode ? "" : `/${getRemoteRepositoryName(resolve(projectRootDir, "../"))}`
 
     /** STATIC: favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
-    const _faviconPath = `/image/favicon.ico?version=${__PROJECT_INFO__.version}`
+    const _faviconPath = `${_faviconPathPrefix}/image/favicon.ico${_query}`
 
     /** STATIC: 端口号 */
     const _port = getPort(~~VITE_PORT)

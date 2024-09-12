@@ -1,6 +1,6 @@
 {
     "name": "@dyb-dev/vant-pro",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "基于 Vue3 + TS + Vant 二次封装的移动端组件库",
     "author": "dyb-dev",
     "license": "MIT",
@@ -17,8 +17,10 @@
             "import": "./dist/es/index.mjs",
             "require": "./dist/cjs/index.cjs",
             "umd": "./dist/umd/index.js",
-            "types": "./dist/types/index.d.ts",
-            "style": "./dist/style.css"
+            "types": "./dist/types/index.d.ts"
+        },
+        "./dist/style.css": {
+            "default": "./dist/style.css"
         }
     },
     "files": [
@@ -68,7 +70,7 @@
     ],
     "devDependencies": {
         "@ant-design/icons-vue": "^7.0.1",
-        "@dyb-dev/eslint-config": "^0.1.0",
+        "@dyb-dev/eslint-config": "^0.1.1",
         "@dyb-dev/prettier-config": "^0.0.5",
         "@dyb-dev/stylelint-config": "^0.0.5",
         "@dyb-dev/ts-config": "^0.0.6",
@@ -106,7 +108,7 @@
     },
     "peerDependencies": {
         "vue": "^3.4.30",
-        "vant": "^4.9.4",
-        "@vueuse/core": "^11.0.3"
+        "@vueuse/core": "^11.0.3",
+        "vant": "^4.9.4"
     }
 }

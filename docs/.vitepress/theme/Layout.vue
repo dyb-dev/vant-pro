@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-07-01 22:28:05
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 22:00:40
+ * @LastEditTime: 2024-09-12 14:09:29
  * @FilePath: /vant-pro/docs/.vitepress/theme/Layout.vue
  * @Description: 自定义vitepress主题组件
 -->
@@ -33,7 +33,7 @@ const data = reactive({
 })
 
 /** STATIC: 首页logo大图路径 */
-const homeHeroImagePath = spliceAssetsPath("/image/logo-large.png")
+const homeHeroImagePath = spliceAssetsPath("/image/logo.png")
 
 /** COMPUTED: 主题模式 */
 const themeMode = computed(() => data.siteConfig.isDark ? "dark" : "light")

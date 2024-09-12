@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 20:11:25
+ * @LastEditTime: 2024-09-12 12:00:35
  * @FilePath: /vant-pro/docs/.vitepress/theme/index.ts
  * @Description: 扩展主题、扩展vue应用配置文件
  */
@@ -19,7 +19,7 @@ import Layout from "./Layout.vue"
 import type { Theme } from "vitepress"
 
 // 引入打包后的组件库样式
-import "../../../dist/style.css"
+import "@dyb-dev/vant-pro/dist/style.css"
 import "vant/lib/index.css"
 import "ant-design-vue/dist/reset.css"
 import "vue3-json-viewer/dist/index.css"

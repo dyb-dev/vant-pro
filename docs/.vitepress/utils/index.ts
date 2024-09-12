@@ -2,11 +2,12 @@
  * @Author: dyb-dev
  * @Date: 2024-08-18 01:04:01
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-21 15:27:42
+ * @LastEditTime: 2024-09-12 15:19:07
  * @FilePath: /vant-pro/docs/.vitepress/utils/index.ts
  * @Description: 构建工具函数模块
  */
 
+import { existsSync, readFileSync } from "fs"
 import { networkInterfaces } from "os"
 import { resolve, basename } from "path"
 
@@ -62,6 +63,56 @@ const getAvailableIPv4HostIP = (): string => {
     }
 
     return _address
+
+}
+
+/**
+ * FUN: 获取远程仓库名称
+ *
+ * @author dyb-dev
+ * @date 12/09/2024/ 14:57:29
+ * @param {string} gitStorageDir - Git 存放目录 例如: 项目根目录
+ * @returns {string} - 远程仓库名称
+ */
+const getRemoteRepositoryName = (gitStorageDir: string): string => {
+
+    /** 远程仓库名称 */
+    let _remoteName = ""
+
+    try {
+
+        // 拼接 .git/config 文件的路径
+        const _gitConfigPath = resolve(gitStorageDir, "./.git/config")
+        // 检查 .git/config 文件是否存在
+        if (!existsSync(_gitConfigPath)) {
+
+            throw `无法找到git配置文件 _gitConfigPath: ${_gitConfigPath}`
+
+        }
+
+        const _gitConfig = readFileSync(_gitConfigPath, "utf-8")
+
+        // 匹配 [remote "xxx"] 结构，获取 remote 名称
+        const _match = _gitConfig.match(/\[remote "(.*)"\]/)
+
+        if (!_match) {
+
+            throw `无法匹配到远程仓库名称 _match: ${_match}`
+
+        }
+
+        // 提取 remote 名称
+        _remoteName = _match[1]
+
+    }
+    catch (error) {
+
+        // 使用 ANSI 码将输出设置为红色
+        console.error("\x1b[31m%s\x1b[0m", `getRemoteRepositoryName() =>> ${error}`)
+
+    }
+
+    return _remoteName
 
 }
 
@@ -189,4 +240,4 @@ const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
 
 }
 
-export { generateProjectInfo, getAvailableIPv4HostIP, setupVitePWAPlugin }
+export { generateProjectInfo, getAvailableIPv4HostIP, setupVitePWAPlugin, getRemoteRepositoryName }

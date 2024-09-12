@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-09-02 14:15:13
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-10 17:20:44
+ * @LastEditTime: 2024-09-12 13:38:36
  * @FilePath: /vant-pro/src/components/CalendarPro/index.vue
  * @Description: 日历组件增强版(基于 vant 的 `Calendar` 组件)
 -->
@@ -14,9 +14,6 @@ defineOptions({
 })
 
 import { useVModels } from "@vueuse/core"
-import dayjs from "dayjs"
-// @ts-ignore
-import { Lunar } from "lunar-javascript"
 import { Calendar, Popup } from "vant"
 import { onMounted, ref, watch } from "vue"
 
@@ -62,7 +59,7 @@ export interface ICalendarProProps {
     title?: string
     /**
      * @description 可选择的最小日期
-     * @default 2000/1/1
+     * @default 10年前
      */
     minDate?: Date
     /**
@@ -244,11 +241,23 @@ const props = withDefaults(defineProps<ICalendarProProps>(), {
     /**
      * @returns {Date} 可选择的最小日期
      */
-    minDate: () => new Date("2000/1/1"),
+    minDate: () => {
+
+        const _today = new Date()
+        _today.setFullYear(_today.getFullYear() - 10) // 减少10年
+        return _today
+
+    },
     /**
      * @returns {Date} 可选择的最大日期
      */
-    maxDate: () => dayjs().add(10, "year").toDate(),
+    maxDate: () => {
+
+        const _today = new Date()
+        _today.setFullYear(_today.getFullYear() + 10) // 增加10年
+        return _today
+
+    },
     /** 是否展示日历标题 */
     showTitle: true,
     /** 是否显示月份背景水印 */
@@ -518,55 +527,6 @@ const onPanelChange = (date: Date) => {
     emits("panelChange", { date })
 
 }
-
-/**
- * FUN: Calendar 格式化函数
- *
- * @param day 当前日期
- * @returns 格式化后的日期
- */
-const formatter = (day: CalendarDayItem) => {
-
-    // 如果有日期
-    if (day.date) {
-
-        // 根据当前时间 获取 lunar 对象
-        const _lunar = Lunar.fromDate(day.date)
-
-        // 获取阳历节日
-        const _solarFestival = _lunar.getSolar().getFestivals().join(",") || ""
-        // 获取农历节日
-        const _lunarFestival = _lunar.getFestivals().join(",") || ""
-        // 阳历节日优先显示，因为它们更为常见和重要
-        day.topInfo = _solarFestival || _lunarFestival
-
-        // 获取农历日
-        const _lunarDay = _lunar.getDayInChinese()
-        day.bottomInfo = _lunarDay
-
-        // 获取今天的 dayjs 对象
-        const _today = dayjs().startOf("day")
-
-        // 如果是今天，添加 '今天' 标记
-        if (dayjs(day.date).isSame(_today, "day")) {
-
-            day.text = "今天"
-
-        }
-
-        // 如果props.formatter为函数，则调用它
-        if (typeof props.formatter === "function") {
-
-            const _day = props.formatter(day)
-            day = _day || day
-
-        }
-
-    }
-
-    return day
-
-}
 </script>
 
 <template>
@@ -607,7 +567,7 @@ const formatter = (day: CalendarDayItem) => {
             :range-prompt="props.rangePrompt"
             :show-range-prompt="props.showRangePrompt"
             :allow-same-day="props.allowSameDay"
-            :formatter="formatter"
+            :formatter="props.formatter"
             :poppable="false"
             color="var(--van-primary-color)"
             @select="onSelect"
@@ -644,7 +604,7 @@ const formatter = (day: CalendarDayItem) => {
         :range-prompt="props.rangePrompt"
         :show-range-prompt="props.showRangePrompt"
         :allow-same-day="props.allowSameDay"
-        :formatter="formatter"
+        :formatter="props.formatter"
         :poppable="false"
         color="var(--van-primary-color)"
         @select="onSelect"

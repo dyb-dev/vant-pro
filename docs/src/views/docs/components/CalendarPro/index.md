@@ -19,19 +19,6 @@ const app = createApp()
 app.use(CalendarPro)
 ```
 
-::: tip 提示
-由于内部使用了 **dayjs** 和 **lunar-javascript** 这2个库，所以还需安装:
-
-```shell
-# 处理日期和时间的库
-pnpm i dayjs
-
-# 公历、农历数据来源
-pnpm i lunar-javascript
-```
-
-:::
-
 ## 代码演示
 
 <preview path="./index.vue" title="源代码 ⬇️"></preview>

@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 22:21:21
+ * @LastEditTime: 2024-09-12 13:44:12
  * @FilePath: /vant-pro/docs/.vitepress/theme/style.css
  * @Description: vitepress默认主题css变量
  */
@@ -73,7 +73,7 @@
     /* 组件：自定义主页 */
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: linear-gradient(120deg, #00b96b 30%, #00a561);
-    --vp-home-hero-image-background-image: linear-gradient(-45deg, #cdffe9 50%, #cdffe9 50%);
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #cdf0e0 50%, #cdf0e0 50%);
     --vp-home-hero-image-filter: blur(44px);
 
     /* 组件：自定义块 */

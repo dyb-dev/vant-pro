@@ -56,7 +56,7 @@ import { createApp } from "vue"
 // 1. 引入 `ListPro` 组件
 import { ListPro } from "@dyb-dev/vant-pro"
 // 2. 引入 vant-pro 组件库样式
-import "@dyb-dev/vant-pro/style.css"
+import "@dyb-dev/vant-pro/dist/style.css"
 
 const app = createApp()
 
@@ -78,7 +78,7 @@ import { createApp } from "vue"
 // 1. 引入全部组件
 import VantPro from "@dyb-dev/vant-pro"
 // 2. 引入 vant-pro 组件库样式
-import "@dyb-dev/vant-pro/style.css"
+import "@dyb-dev/vant-pro/dist/style.css"
 
 const app = createApp()
 

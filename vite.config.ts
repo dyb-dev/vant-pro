@@ -64,7 +64,7 @@ export default defineConfig({
         // TODO: 如果有不想打包进库的依赖，可以在这里配置，记得配置 package.json 的 peerDependencies 选项
         rollupOptions: {
             // 确保外部化处理那些你不想打包进库的依赖
-            external: ["vue", "vant", "@vueuse/core", "dayjs", "lunar-javascript", "@vant/area-data"],
+            external: ["vue", "vant", "@vueuse/core"],
             output: {
                 // 允许同时存在命名导出和默认导出
                 exports: "named",
@@ -72,9 +72,7 @@ export default defineConfig({
                 globals: {
                     vue: "Vue",
                     vant: "vant",
-                    "@vueuse/core": "VueUse",
-                    dayjs: "Dayjs",
-                    "lunar-javascript": "Solar"
+                    "@vueuse/core": "VueUse"
                 }
             }
         }
