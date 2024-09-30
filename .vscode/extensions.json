@@ -29,6 +29,8 @@
         // git-commit-plugin 插件
         "redjue.git-commit-plugin",
         // GitHub Copilot 插件
+        "github.copilot",
+        // GitHub Copilot Chat 插件
         "github.copilot-chat",
         // GitLens 插件
         "eamodio.gitlens",
@@ -67,14 +69,8 @@
         // uni-app-snippets 插件
         "uni-helper.uni-app-snippets-vscode",
         // uni-create-view 插件
-        "mrmaoddxxaa.create-uniapp-view",
-        // uni-highlight 插件
         "uni-helper.uni-highlight-vscode",
         // uni-ui-snippets 插件
-        "uni-helper.uni-ui-snippets-vscode",
-        // uniapp-snippet 插件
-        "dlhtx.uniapp-snippet",
-        // Var Conversion 插件
         "xiaoxintongxue.var-conv",
         // Vue - Official 插件
         "vue.volar",

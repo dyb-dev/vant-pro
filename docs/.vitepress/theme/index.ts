@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-12 12:00:35
+ * @LastEditTime: 2024-09-30 15:52:23
  * @FilePath: /vant-pro/docs/.vitepress/theme/index.ts
  * @Description: 扩展主题、扩展vue应用配置文件
  */
@@ -54,6 +54,7 @@ export default {
             // 根据debug参数判断是否加载vconsole
             if (params.get("debug") === "1") {
 
+                console.log("[项目信息]", __PROJECT_INFO__)
                 const vconsole = await import("vconsole")
                 window.vConsole = new vconsole.default()
 

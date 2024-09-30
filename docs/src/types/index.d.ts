@@ -5,7 +5,5 @@ declare global {
     interface Window {
         /** vconsole 实例 */
         vConsole: VConsole
-        /** 项目信息(window全局) */
-        __PROJECT_INFO__: IProjectInfo
     }
 }

@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-28 14:19:02
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-18 17:50:27
+ * @LastEditTime: 2024-09-30 15:51:44
  * @FilePath: /vant-pro/docs/src/utils/url/index.ts
  * @Description: url模块
  */
@@ -14,7 +14,7 @@
  * @date 28/06/2024/  14:25:30
  * @export
  * @param {string} subPath - 子路径
- * @returns {*}  {string} - 根据 `import.meta.env.VITE_PROJECT_ASSETS_DIR` 拼接后的资源路径
+ * @returns {*}  {string} - 根据 `__PROJECT_INFO__.env.VITE_PROJECT_ASSETS_DIR` 拼接后的资源路径
  */
 const spliceAssetsPath = (subPath: string): string => {
 
