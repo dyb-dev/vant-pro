@@ -3,6 +3,8 @@
 {
     // #region CODE: vscode 基础配置
 
+    "editor.linkedEditing": true,
+    "editor.stickyScroll.enabled": true,
     // 开启Prettier ESLint保存自动格式化（formatOnSave与codeActionsOnSave冲突，会格式化2次，所以不在codeActionsOnSave中写）
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
@@ -13,6 +15,8 @@
     },
     // 设置全局默认格式化插件，无需手动设置
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    // 设置 prettier格式化 在 eslint格式化 前执行
+    "vs-code-prettier-eslint.prettierLast": false,
     "[scss]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
@@ -22,21 +26,17 @@
     "[css]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
-    // 设置 prettier格式化 在 eslint格式化 前执行
-    "vs-code-prettier-eslint.prettierLast": false,
-    "editor.linkedEditing": true,
-    "editor.stickyScroll.enabled": true,
     "workbench.tree.indent": 10,
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1d375bb6"
+    },
     "files.defaultLanguage": "html",
+    "git.autofetch": true,
     "search.exclude": {
         "**/.history": true,
         "**/cache": true,
         "*-lock.*": true
     },
-    "workbench.colorCustomizations": {
-        "editor.lineHighlightBackground": "#1d375bb6"
-    },
-    "git.autofetch": true,
     "explorer.compactFolders": false,
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": false,
@@ -323,6 +323,7 @@
         "timeformat",
         "todohighlight",
         "tsbuildinfo",
+        "uniapp",
         "unpackage",
         "unplugin",
         "Vant",
