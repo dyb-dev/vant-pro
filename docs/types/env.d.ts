@@ -19,6 +19,6 @@ interface ImportMetaEnv {
     readonly VITE_OUT_DIR: string
     /** 打包输出资源目录 默认:assets */
     readonly VITE_OUT_ASSETS_DIR: string
-    /** 项目资源目录前缀 默认:空 */
-    readonly VITE_PROJECT_ASSETS_DIR_PREFIX: string
+    /** 资源基础路径 默认:空 */
+    readonly VITE_ASSETS_BASE_PATH: string
 }

@@ -39,13 +39,13 @@ const spliceAssetsPath = (subPath: string): string => {
 
     let _path = `${subPath}?version=${__PROJECT_INFO__.version}`
 
-    /** 项目资源目录前缀 */
-    const _projectAssetsDirPrefix = __PROJECT_INFO__.env.VITE_PROJECT_ASSETS_DIR_PREFIX
+    /** 资源基础路径 */
+    const _assetsBasePath = __PROJECT_INFO__.env.VITE_ASSETS_BASE_PATH
 
-    // 如果存在项目资源目录前缀，则拼接
-    if (_projectAssetsDirPrefix) {
+    // 如果存在资源基础路径，则拼接
+    if (_assetsBasePath) {
 
-        _path = `${_projectAssetsDirPrefix}${_path}`
+        _path = `${_assetsBasePath}${_path}`
 
     }
     return _path
