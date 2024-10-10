@@ -45,7 +45,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
     const _env = loadEnv(mode, resolve(projectRootDir, "../")) as unknown as ImportMetaEnv
 
     const {
-        VITE_ASSETS_BASE_PATH,
+        VITE_BASE_PATH,
         VITE_MARKDOWN_SOURCE_DIR,
         VITE_OUT_DIR,
         VITE_OUT_ASSETS_DIR,
@@ -66,7 +66,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
     const _logoPath = `/image/logo.png${_query}`
 
     /** STATIC: 图标路径前缀 */
-    const _faviconPathPrefix = isDevMode ? "" : VITE_ASSETS_BASE_PATH
+    const _faviconPathPrefix = isDevMode ? "" : VITE_BASE_PATH
 
     /** STATIC: favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
     const _faviconPath = `${_faviconPathPrefix}/image/favicon.ico${_query}`
@@ -83,7 +83,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
         // 网站描述
         description: "Vant-Pro组件库文档",
         // 网站基础路径
-        base: isDevMode ? "/" : VITE_ASSETS_BASE_PATH || "/",
+        base: isDevMode ? "/" : VITE_BASE_PATH || "/",
         // markdown 源文件目录
         srcDir: resolve(projectRootDir, `./src/${VITE_MARKDOWN_SOURCE_DIR}`),
         // 打包输出目录 默认: ./.vitepress/dist

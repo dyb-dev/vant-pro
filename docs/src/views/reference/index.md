@@ -405,7 +405,7 @@ import { spliceAssetsPath } from "@/utils"
 ::: tip
 推荐使用 `src/utils/url` 目录提供的 `spliceAssetsPath` 方法拼接路径
 
-如果 `VITE_ASSETS_BASE_PATH` 为空，可直接用 `/` 拼接，例如: `/image/game.jpg`
+如果 `VITE_BASE_PATH` 为空，可直接用 `/` 拼接，例如: `/image/game.jpg`
 :::
 
 **输入**
