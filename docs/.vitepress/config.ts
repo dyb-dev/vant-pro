@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-12 16:05:41
+ * @LastEditTime: 2024-10-14 12:01:22
  * @FilePath: /vant-pro/docs/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -168,7 +168,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
             langMenuLabel: "切换语言",
             // 页面最后更新时间配置
             lastUpdated: {
-                text: "最后更新时间于:",
+                text: "最后更新时间于",
                 formatOptions: {
                     // 显示完整的日期格式，包括星期、月份、日期和年份
                     dateStyle: "full",
