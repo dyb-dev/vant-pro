@@ -86,6 +86,7 @@
         "portfinder-sync": "^0.0.2",
         "prettier": "^3.3.2",
         "prettier-eslint": "^16.3.0",
+        "query-string": "^9.1.1",
         "sass": "^1.75.0",
         "stylelint": "^16.3.1",
         "typescript": "^5.4.5",
@@ -107,8 +108,8 @@
         "workbox-window": "^7.1.0"
     },
     "peerDependencies": {
-        "vue": "^3.4.30",
         "@vueuse/core": "^11.0.3",
-        "vant": "^4.9.4"
+        "vant": "^4.9.4",
+        "vue": "^3.4.30"
     }
 }

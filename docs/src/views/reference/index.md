@@ -326,7 +326,7 @@ export default config.ts
 ```vue
 <script setup>
 import TestComponent from "@/views/reference/component/index.vue"
-import { spliceAssetsPath } from "@/utils"
+import { toAssetsAbsoluteUrl } from "@/utils"
 </script>
 
 <TestComponent />
@@ -336,7 +336,7 @@ import { spliceAssetsPath } from "@/utils"
 
 <script setup>
 import TestComponent from '@/views/reference/component/index.vue'
-import { spliceAssetsPath } from "@/utils"
+import { toAssetsAbsoluteUrl } from "@/utils"
 </script>
 
 <TestComponent/>
@@ -403,7 +403,7 @@ import { spliceAssetsPath } from "@/utils"
 ## 使用public目录资源 {#public-dir}
 
 ::: tip
-推荐使用 `src/utils/url` 目录提供的 `spliceAssetsPath` 方法拼接路径
+推荐使用 `src/utils/url` 目录提供的 `toAssetsAbsoluteUrl` 方法拼接路径
 
 如果 `VITE_BASE_PATH` 为空，可直接用 `/` 拼接，例如: `/image/game.jpg`
 :::
@@ -411,12 +411,12 @@ import { spliceAssetsPath } from "@/utils"
 **输入**
 
 ```vue
-<img style="width: 150px" :src="spliceAssetsPath(`/image/game.jpg`)" alt="" />
+<img style="width: 150px" :src="toAssetsAbsoluteUrl(`/image/game.jpg`)" alt="" />
 ```
 
 **输出**
 
-<img style="width: 150px" :src="spliceAssetsPath(`/image/game.jpg`)" alt="" />
+<img style="width: 150px" :src="toAssetsAbsoluteUrl(`/image/game.jpg`)" alt="" />
 
 ## 更多 {#more}
 

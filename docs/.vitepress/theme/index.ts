@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-30 15:52:23
+ * @LastEditTime: 2024-10-16 01:09:42
  * @FilePath: /vant-pro/docs/.vitepress/theme/index.ts
  * @Description: 扩展主题、扩展vue应用配置文件
  */
@@ -11,6 +11,8 @@
 import { AntDesignContainer } from "@vitepress-demo-preview/component"
 import { Lazyload } from "vant"
 import DefaultTheme from "vitepress/theme"
+
+import { isBrowserEnv, isEnableDebug } from "@/utils"
 
 import { setupServiceWorker } from "../../src/sw"
 
@@ -40,7 +42,7 @@ export default {
         app.component("demo-preview", AntDesignContainer)
 
         // 浏览器环境下
-        if (typeof window !== "undefined") {
+        if (isBrowserEnv()) {
 
             /** TODO: 如果需要使用 PWA 则解开此段代码 */
             setupServiceWorker()
@@ -48,11 +50,8 @@ export default {
             // 需要手动注册 v-lazy 指令,实现图片懒加载
             app.use(Lazyload, { lazyComponent: true })
 
-            // 获取URL查询参数实例
-            const params = new URLSearchParams(window.location.search)
-
             // 根据debug参数判断是否加载vconsole
-            if (params.get("debug") === "1") {
+            if (isEnableDebug()) {
 
                 console.log("[项目信息]", __PROJECT_INFO__)
                 const vconsole = await import("vconsole")

@@ -1,6 +1,22 @@
 /** vite环境变量 */
 interface ImportMetaEnv {
-    // STATIC: 共用
+    // STATIC: 运行时注入的环境变量
+    /** 运行时注入 基础路径 */
+    readonly BASE_URL: string
+    /** 运行时注入 是否为开发环境 */
+    readonly DEV: boolean
+    /**
+     * 运行时注入 当前模式
+     * - development: 开发环境
+     * - production: 生产环境
+     */
+    readonly MODE: "development" | "production"
+    /** 运行时注入 是否为生产环境 */
+    readonly PROD: boolean
+    /** 运行时注入 是否为服务端渲染模式 */
+    readonly SSR: boolean
+
+    // STATIC: 公共
     /** 协议 默认:http  */
     readonly VITE_PROTOCOL: string
     /** 默认端口号 默认:8080 */
@@ -21,4 +37,9 @@ interface ImportMetaEnv {
     readonly VITE_OUT_ASSETS_DIR: string
     /** 网站基础路径 默认:空 */
     readonly VITE_BASE_PATH: string
+}
+
+/** 扩展 ImportMeta 接口 */
+interface ImportMeta {
+    readonly env: ImportMetaEnv
 }
