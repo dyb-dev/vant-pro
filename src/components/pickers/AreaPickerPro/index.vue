@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-09-06 23:15:42
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 01:40:48
+ * @LastEditTime: 2024-10-16 16:35:19
  * @FilePath: /vant-pro/src/components/picker/AreaPickerPro/index.vue
  * @Description: 地区选择器增强版组件(基于 vant 的 `Popup`、`Area`、`Loading` 组件)
 -->
@@ -17,7 +17,7 @@ import { useVModels } from "@vueuse/core"
 import { Popup, Area, Loading } from "vant"
 import { watch, onMounted, ref, computed } from "vue"
 
-import type { TPickerProBaseActionType, TPickerProBaseSelectedResult } from "../types"
+import type { TPickerProBaseActionType, TPickerProBaseSelectedResult } from "../type"
 import type { AreaList } from "vant"
 
 /** 地区选择器类型 */
@@ -348,8 +348,8 @@ const close = async(actionType: TPickerProBaseActionType = "cancel"): Promise<bo
                 <div :style="buttonStyles">
                     <Loading
                         v-if="isBeforeClose && selectedResult.actionType === 'confirm'"
+                        class="vant-pro-picker-pro-loading"
                         color="var(--van-picker-confirm-action-color)"
-                        size="23px"
                     />
                     <span v-else>{{ props.confirmButtonText }}</span>
                 </div>
@@ -359,8 +359,8 @@ const close = async(actionType: TPickerProBaseActionType = "cancel"): Promise<bo
                 <div :style="buttonStyles">
                     <Loading
                         v-if="isBeforeClose && selectedResult.actionType === 'cancel'"
+                        class="vant-pro-picker-pro-loading"
                         color="var(--van-picker-cancel-action-color)"
-                        size="23px"
                     />
                     <span v-else>{{ props.cancelButtonText }}</span>
                 </div>

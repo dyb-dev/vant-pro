@@ -2,25 +2,25 @@
  * @Author: dyb-dev
  * @Date: 2024-09-09 14:22:58
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 11:36:55
- * @FilePath: /vant-pro/src/components/picker/TimePickerPro/index.vue
- * @Description: 时间选择器增强版组件(基于 vant 的 `Popup`、`TimePicker`、`Loading` 组件)
+ * @LastEditTime: 2024-10-16 16:49:04
+ * @FilePath: /vant-pro/src/components/pickers/DatePickerPro/index.vue
+ * @Description: 日期选择器增强版组件(基于 vant 的 `Popup`、`DatePicker`、`Loading` 组件)
 -->
 
 <script setup lang="ts">
 defineOptions({
     /** 设置组件名 */
-    name: "TimePickerPro"
+    name: "DatePickerPro"
 })
 
 import { useVModels } from "@vueuse/core"
-import { Popup, Loading, TimePicker } from "vant"
+import { Popup, DatePicker, Loading } from "vant"
 import { watch, onMounted, ref, computed } from "vue"
 
-import type { TPickerProBaseActionType, TPickerProBaseSelectedResult, TPickerProBaseUnmountParam } from "../types"
-import type { PickerOption, TimePickerColumnType } from "vant"
+import type { TPickerProBaseActionType, TPickerProBaseSelectedResult, TPickerProBaseUnmountParam } from "../type"
+import type { DatePickerColumnType, PickerOption } from "vant"
 
-export interface ITimePickerProProps {
+export interface IDatePickerProProps {
     /**
      * @description 是否显示
      */
@@ -31,55 +31,27 @@ export interface ITimePickerProProps {
      */
     unmount?: (...ares: TPickerProBaseUnmountParam) => void
     /**
-     * @description 时间选择器的值
+     * @description 日期选择器的值
      */
     pickerValue?: string[]
     /**
-     * @description 选项类型，由 hour、minute 和 second 组成的数组
-     * @default ['hour', 'minute']
+     * @description 选项类型，由 year、month 和 day 组成的数组
+     * @default ['year', 'month', 'day']
      */
-    columnsType?: TimePickerColumnType[]
+    columnsType?: DatePickerColumnType[]
     /**
-     * @description 可选的最小小时
-     * @default 0
+     * @description 可选的最小时间，精确到日
+     * @default 十年前
      */
-    minHour?: number | string
+    minDate?: Date
     /**
-     * @description 可选的最大小时
-     * @default 23
+     * @description 可选的最大时间，精确到日
+     * @default 十年后
      */
-    maxHour?: number | string
-    /**
-     * @description 可选的最小分钟
-     * @default 0
-     */
-    minMinute?: number | string
-    /**
-     * @description 可选的最大分钟
-     * @default 59
-     */
-    maxMinute?: number | string
-    /**
-     * @description 可选的最小秒数
-     * @default 0
-     */
-    minSecond?: number | string
-    /**
-     * @description 可选的最大秒数
-     * @default 59
-     */
-    maxSecond?: number | string
-    /**
-     * @description 可选的最小时间，格式参考 07:40:00，使用时 min-hour、min-minute、min-second 不会生效
-     */
-    minTime?: string
-    /**
-     * @description 可选的最大时间，格式参考 10:20:00，使用时 max-hour、max-minute、max-second 不会生效
-     */
-    maxTime?: string
+    maxDate?: Date
     /**
      * @description 顶部栏标题
-     * @default 请选择时间
+     * @default 请选择日期
      */
     title?: string
     /**
@@ -122,14 +94,14 @@ export interface ITimePickerProProps {
      * @param options 当前可选项
      * @returns {PickerOption[]} 返回过滤后的选项
      */
-    filter?: (type: TimePickerColumnType, options: PickerOption[]) => PickerOption[]
+    filter?: (type: DatePickerColumnType, options: PickerOption[]) => PickerOption[]
     /**
      * @description 选项格式化函数
      * @param type 选项类型
      * @param option 当前选项
      * @returns {PickerOption} 返回格式化后的选项
      */
-    formatter?: (type: TimePickerColumnType, option: PickerOption) => PickerOption
+    formatter?: (type: DatePickerColumnType, option: PickerOption) => PickerOption
     /**
      * @description 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
      * @param selectedResult 选择结果
@@ -138,7 +110,7 @@ export interface ITimePickerProProps {
     beforeClose?: (selectedResult: TPickerProBaseSelectedResult) => boolean | Promise<boolean>
 }
 
-const props = withDefaults(defineProps<ITimePickerProProps>(), {
+const props = withDefaults(defineProps<IDatePickerProProps>(), {
     /** 是否显示浮层 */
     show: false,
     /** 是否锁定背景滚动 */
@@ -312,7 +284,7 @@ const close = async(actionType: TPickerProBaseActionType = "cancel"): Promise<bo
  * @param option 选项
  * @returns {PickerOption} 格式化后的选项
  */
-const formatter = (type: TimePickerColumnType, option: PickerOption): PickerOption => {
+const formatter = (type: DatePickerColumnType, option: PickerOption): PickerOption => {
 
     if (props.formatter) {
 
@@ -322,16 +294,16 @@ const formatter = (type: TimePickerColumnType, option: PickerOption): PickerOpti
 
     switch (type) {
 
-    case "hour":
-        option.text += "时"
+    case "year":
+        option.text += "年"
         break
 
-    case "minute":
-        option.text += "分"
+    case "month":
+        option.text += "月"
         break
 
-    case "second":
-        option.text += "秒"
+    case "day":
+        option.text += "日"
         break
 
     }
@@ -354,17 +326,11 @@ const formatter = (type: TimePickerColumnType, option: PickerOption): PickerOpti
         :teleport="props.teleport"
         @closed="props.unmount?.(selectedResult)"
     >
-        <TimePicker
+        <DatePicker
             v-model="pickerValue"
+            :min-date="props.minDate"
+            :max-date="props.maxDate"
             :columns-type="props.columnsType"
-            :min-hour="props.minHour"
-            :max-hour="props.maxHour"
-            :min-minute="props.minMinute"
-            :max-minute="props.maxMinute"
-            :min-second="props.minSecond"
-            :max-second="props.maxSecond"
-            :min-time="props.minTime"
-            :max-time="props.maxTime"
             :formatter="<any>formatter"
             :filter="<any>props.filter"
             :title="props.title"
@@ -379,8 +345,8 @@ const formatter = (type: TimePickerColumnType, option: PickerOption): PickerOpti
                 <div :style="buttonStyles">
                     <Loading
                         v-if="isBeforeClose && selectedResult.actionType === 'confirm'"
+                        class="vant-pro-picker-pro-loading"
                         color="var(--van-picker-confirm-action-color)"
-                        size="23px"
                     />
                     <span v-else>{{ props.confirmButtonText }}</span>
                 </div>
@@ -390,12 +356,12 @@ const formatter = (type: TimePickerColumnType, option: PickerOption): PickerOpti
                 <div :style="buttonStyles">
                     <Loading
                         v-if="isBeforeClose && selectedResult.actionType === 'cancel'"
+                        class="vant-pro-picker-pro-loading"
                         color="var(--van-picker-cancel-action-color)"
-                        size="23px"
                     />
                     <span v-else>{{ props.cancelButtonText }}</span>
                 </div>
             </template>
-        </TimePicker>
+        </DatePicker>
     </Popup>
 </template>

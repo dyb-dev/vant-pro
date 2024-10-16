@@ -2,8 +2,8 @@
  * @Author: dyb-dev
  * @Date: 2024-09-06 23:15:42
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 01:41:19
- * @FilePath: /vant-pro/src/components/picker/PickerPro/index.vue
+ * @LastEditTime: 2024-10-16 16:53:11
+ * @FilePath: /vant-pro/src/components/pickers/PickerPro/index.vue
  * @Description: 选择器增强版组件(基于 vant 的 `Popup`、`Picker`、`Search`、`Loading`、`Icon` 组件)
 -->
 
@@ -19,7 +19,7 @@ import { watch, onMounted, ref, computed } from "vue"
 
 import { debounce } from "#/utils"
 
-import type { TPickerProBaseActionType, TPickerProBaseSelectedResult, TPickerProBaseUnmountParam } from "../types"
+import type { TPickerProBaseActionType, TPickerProBaseSelectedResult, TPickerProBaseUnmountParam } from "../type"
 import type { PickerFieldNames, PickerOption, PickerColumn } from "vant"
 
 /** 请求 Picker 数据函数的参数 */
@@ -434,8 +434,8 @@ const close = async(actionType: TPickerProBaseActionType = "cancel") => {
                 <div :style="buttonStyles">
                     <Loading
                         v-if="isBeforeClose && selectedResult.actionType === 'confirm'"
+                        class="vant-pro-picker-pro-loading"
                         color="var(--van-picker-confirm-action-color)"
-                        size="23px"
                     />
                     <span v-else>{{ props.confirmButtonText }}</span>
                 </div>
@@ -445,8 +445,8 @@ const close = async(actionType: TPickerProBaseActionType = "cancel") => {
                 <div :style="buttonStyles">
                     <Loading
                         v-if="isBeforeClose && selectedResult.actionType === 'cancel'"
+                        class="vant-pro-picker-pro-loading"
                         color="var(--van-picker-cancel-action-color)"
-                        size="23px"
                     />
                     <span v-else>{{ props.cancelButtonText }}</span>
                 </div>
@@ -454,13 +454,8 @@ const close = async(actionType: TPickerProBaseActionType = "cancel") => {
 
             <template v-if="loadStatus === 'fail'" #columns-bottom>
                 <div class="vant-pro-picker-pro__fetch-data-fail-tip" @click="onClickTip">
-                    <Icon
-                        class="vant-pro-picker-pro__fetch-data-fail-tip__icon"
-                        name="replay"
-                        color="var(--van-text-color-2)"
-                        :size="20"
-                    />
-                    {{ props.fetchDataFailTipText }}
+                    <Icon class="vant-pro-picker-pro__fetch-data-fail-tip__icon" name="replay" color="var(--van-text-color-2)" />
+                    <span class="vant-pro-picker-pro__fetch-data-fail-tip__text">{{ props.fetchDataFailTipText }}</span>
                 </div>
             </template>
         </Picker>
@@ -477,12 +472,16 @@ const close = async(actionType: TPickerProBaseActionType = "cancel") => {
         flex-direction: column;
         align-items: center;
         color: var(--van-text-color-2);
-        font-size: var(--van-font-size-md);
+        font-size: 20px;
         text-align: center;
         transform: translate(-50%, -50%);
 
         &__icon {
             margin-bottom: 5px;
+        }
+
+        &__text {
+            font-size: var(--van-font-size-md);
         }
     }
 }

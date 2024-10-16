@@ -43,19 +43,19 @@ const config: DefaultTheme.Sidebar = {
                     items: [
                         {
                             text: "PickerPro 自定义选择器",
-                            link: `${rootDir}/components/picker/PickerPro/`
+                            link: `${rootDir}/components/pickers/PickerPro/`
                         },
                         {
                             text: "AreaPickerPro 省市区选择器",
-                            link: `${rootDir}/components/picker/AreaPickerPro/`
+                            link: `${rootDir}/components/pickers/AreaPickerPro/`
                         },
                         {
                             text: "DatePickerPro 日期选择器",
-                            link: `${rootDir}/components/picker/DatePickerPro/`
+                            link: `${rootDir}/components/pickers/DatePickerPro/`
                         },
                         {
                             text: "TimePickerPro 时间选择器",
-                            link: `${rootDir}/components/picker/TimePickerPro/`
+                            link: `${rootDir}/components/pickers/TimePickerPro/`
                         }
                     ]
                 }

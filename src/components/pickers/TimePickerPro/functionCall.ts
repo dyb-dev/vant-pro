@@ -13,7 +13,7 @@ import TimePickerPro from "./index.vue"
 
 import type { TFilteredDefaultOptions } from "#/utils"
 import type { ITimePickerProProps } from "./index.vue"
-import type { TShowPickerProBaseResult } from "../types"
+import type { TShowPickerProBaseResult } from "../type"
 
 /** 显示地区选择器增强版的选项 */
 type TShowTimePickerProOptions = TFilteredDefaultOptions<ITimePickerProProps>

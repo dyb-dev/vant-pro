@@ -13,7 +13,7 @@ import DatePickerPro from "./index.vue"
 
 import type { TFilteredDefaultOptions } from "#/utils"
 import type { IDatePickerProProps } from "./index.vue"
-import type { TShowPickerProBaseResult } from "../types"
+import type { TShowPickerProBaseResult } from "../type"
 
 /** 显示日期选择器增强版的选项 */
 type TShowDatePickerProOptions = TFilteredDefaultOptions<IDatePickerProProps>

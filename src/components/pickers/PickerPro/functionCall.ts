@@ -13,7 +13,7 @@ import PickerPro from "./index.vue"
 
 import type { TFilteredDefaultOptions } from "#/utils"
 import type { IPickerProProps } from "./index.vue"
-import type { TShowPickerProBaseResult } from "../types"
+import type { TShowPickerProBaseResult } from "../type"
 
 /** 显示选择器增强版的选项 */
 type TShowPickerProOptions = TFilteredDefaultOptions<IPickerProProps>

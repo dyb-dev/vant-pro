@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-09-03 16:11:45
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 01:51:02
+ * @LastEditTime: 2024-10-16 16:32:40
  * @FilePath: /vant-pro/src/components/LoadBox/index.vue
  * @Description: load盒子组件(基于 vant 的 `Loading`、`Icon` 组件)
 -->
@@ -135,7 +135,7 @@ const text = computed(() => {
             <TransitionPro mode="out-in">
                 <!-- 显示加载失败的图标和描述 -->
                 <div v-if="status === 'fail'" class="vant-pro-load-box__fail" @click="props.retryLoadFn">
-                    <Icon :name="icon" :color="props.color" :size="20" />
+                    <Icon :name="icon" :color="props.color" />
 
                     <div class="vant-pro-load-box__fail__text" :style="{ color: props.color }">
                         {{ text }}
@@ -145,8 +145,7 @@ const text = computed(() => {
                 <!-- 显示加载中的图标和描述 -->
                 <Loading
                     v-else
-                    size="20px"
-                    text-size="12px"
+                    class="vant-pro-load-box__loading"
                     :color="props.color"
                     :text-color="props.color"
                     :type="<LoadingType>icon"
@@ -177,10 +176,21 @@ const text = computed(() => {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 20px;
 
             &__text {
                 margin-top: 8px;
+                font-size: 12px;
+            }
+        }
+
+        &__loading {
+            & > .van-loading__spinner {
+                width: 20px;
+                height: 20px;
+            }
+
+            & > .van-loading__text {
                 font-size: 12px;
             }
         }
