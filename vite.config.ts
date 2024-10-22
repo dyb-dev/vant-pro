@@ -84,6 +84,8 @@ export default defineConfig({
         // 指定传递给 CSS 预处理器的选项
         preprocessorOptions: {
             scss: {
+                // 使用最新的 js API编译
+                api: "modern-compiler",
                 additionalData: `
                     @use "${projectRootDir}/src/styles/scss-var.scss" as *;
                     @use "${projectRootDir}/src/styles/mixins/index.scss" as *;

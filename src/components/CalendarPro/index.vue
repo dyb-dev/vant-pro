@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-09-02 14:15:13
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-12 13:38:36
+ * @LastEditTime: 2024-10-22 15:41:16
  * @FilePath: /vant-pro/src/components/CalendarPro/index.vue
  * @Description: 日历组件增强版(基于 vant 的 `Calendar` 组件)
 -->
@@ -290,15 +290,15 @@ const emits = defineEmits<{
     /** 当日历组件的 type 为 multiple 时，取消选中日期时触发 */
     (event: "unselect", date: Date): void
     /** 当某个月份进入可视区域时触发 */
-    (event: "monthShow", { date, title }: { date: Date; title: string }): void
+    (event: "month-show", { date, title }: { date: Date; title: string }): void
     /** 范围选择超过最多可选天数时触发 */
-    (event: "overRange"): void
+    (event: "over-range"): void
     /** 点击日历副标题时触发 */
-    (event: "clickSubtitle", e: MouseEvent): void
+    (event: "click-subtitle", e: MouseEvent): void
     /** 点击禁用日期时触发 */
-    (event: "clickDisabledDate", date: TCalendarProSelectDate): void
+    (event: "click-disabled-date", date: TCalendarProSelectDate): void
     /** 日历面板切换时触发 */
-    (event: "panelChange", { date }: { date: Date }): void
+    (event: "panel-change", { date }: { date: Date }): void
 }>()
 
 /** REF: 定义双向绑定 */
@@ -464,7 +464,7 @@ const onMonthShow = (date: Date, title: string) => {
         props.monthShow(date, title)
 
     }
-    emits("monthShow", { date, title })
+    emits("month-show", { date, title })
 
 }
 
@@ -476,7 +476,7 @@ const onOverRange = () => {
         props.overRange()
 
     }
-    emits("overRange")
+    emits("over-range")
 
 }
 
@@ -492,7 +492,7 @@ const onClickSubtitle = (e: MouseEvent) => {
         props.clickSubtitle(e)
 
     }
-    emits("clickSubtitle", e)
+    emits("click-subtitle", e)
 
 }
 
@@ -508,7 +508,7 @@ const onClickDisabledDate = (date: TCalendarProSelectDate) => {
         props.clickDisabledDate(date)
 
     }
-    emits("clickDisabledDate", date)
+    emits("click-disabled-date", date)
 
 }
 
@@ -524,7 +524,7 @@ const onPanelChange = (date: Date) => {
         props.panelChange(date)
 
     }
-    emits("panelChange", { date })
+    emits("panel-change", { date })
 
 }
 </script>
