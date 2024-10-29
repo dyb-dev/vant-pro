@@ -1,3 +1,12 @@
+/*
+ * @Author: dyb-dev
+ * @Date: 2024-08-31 23:44:01
+ * @LastEditors: dyb-dev
+ * @LastEditTime: 2024-10-29 20:28:21
+ * @FilePath: /vant-pro/src/utils/withInstall.ts
+ * @Description: 组件注册的辅助函数
+ */
+
 import type { App, Component } from "vue"
 
 // https://github.com/vant-ui/vant/issues/8302

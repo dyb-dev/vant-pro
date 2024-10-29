@@ -1,3 +1,12 @@
+/*
+ * @Author: dyb-dev
+ * @Date: 2024-08-31 23:28:33
+ * @LastEditors: dyb-dev
+ * @LastEditTime: 2024-10-29 20:26:57
+ * @FilePath: /vant-pro/src/utils/mountComponent.ts
+ * @Description: 挂载组件基础方法
+ */
+
 import { createApp, type Component } from "vue"
 
 /** 挂载根节点的选择器，默认为 `#app` */
