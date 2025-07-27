@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-10-16 01:08:35
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 01:08:40
+ * @LastEditTime: 2025-07-28 02:09:21
  * @FilePath: /vant-pro/docs/src/utils/env/index.ts
  * @Description: 环境相关工具函数
  */
@@ -27,13 +27,27 @@ const isBrowserEnv = (): boolean => typeof window !== "undefined"
  */
 const isDevEnv = (): boolean => import.meta.env.DEV
 
+/** LET: 是否已启用调试模式 */
+let _debug: boolean = false
+
 /**
- * FUN: 是否启用调试
+ * FUN: 是否已启用调试模式
  *
  * @author dyb-dev
  * @date 23/05/2023/  13:58:40
- * @returns {boolean} 是否开启debug
+ * @returns {boolean} 是否已启用调试模式
  */
-const isEnableDebug = (): boolean => getCurrentUrlQueryValue("debug") === "1"
+const isEnableDebug = (): boolean => {
+
+    // 未启用调试模式时
+    if (!_debug) {
+
+        _debug = getCurrentUrlQueryValue("debug") === "1"
+
+    }
+
+    return _debug
+
+}
 
 export { isBrowserEnv, isDevEnv, isEnableDebug }
