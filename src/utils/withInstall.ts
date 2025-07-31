@@ -1,8 +1,8 @@
 /*
  * @Author: dyb-dev
  * @Date: 2024-08-31 23:44:01
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-29 20:28:21
+ * @LastEditors: v_zhgtzhong
+ * @LastEditTime: 2025-08-01 00:32:23
  * @FilePath: /vant-pro/src/utils/withInstall.ts
  * @Description: 组件注册的辅助函数
  */
@@ -27,19 +27,19 @@ type EventShim = {
  * `install` 方法用于将组件全局注册到 Vue 应用中。
  * 此外，组件还扩展了 `EventShim` 类型，以确保它可以处理 `onClick` 事件。
  */
-type WithInstall<T> = T & {
+export type WithInstall<T> = T & {
     install(app: App): void
 } & EventShim
 
 /**
- * 一个实用函数，用于为 Vue 组件添加 `install` 方法。
+ * FUN: 一个实用函数，用于为 Vue 组件添加 `install` 方法。
  * 该方法允许将组件全局注册到 Vue 应用中。
  *
  * @template T - 组件类型
  * @param options - 需要添加 `install` 方法的组件
  * @returns 带有 `install` 方法的组件
  */
-const withInstall = <T extends Component>(options: T) => {
+export const withInstall = <T extends Component>(options: T) => {
 
     (options as Record<string, unknown>).install = (app: App) => {
 
@@ -55,7 +55,3 @@ const withInstall = <T extends Component>(options: T) => {
     return options as WithInstall<T>
 
 }
-
-export type { WithInstall }
-
-export { withInstall }

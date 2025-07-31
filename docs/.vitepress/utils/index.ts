@@ -1,8 +1,8 @@
 /*
  * @Author: dyb-dev
  * @Date: 2024-08-18 01:04:01
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-30 15:51:11
+ * @LastEditors: v_zhgtzhong
+ * @LastEditTime: 2025-08-01 00:28:09
  * @FilePath: /vant-pro/docs/.vitepress/utils/index.ts
  * @Description: 构建工具函数模块
  */
@@ -25,7 +25,7 @@ import pkg from "../../../package.json"
  * @param {ImportMetaEnv} env - 环境变量
  * @returns {*}  {IProjectInfo} - 项目信息
  */
-const generateProjectInfo = (env: ImportMetaEnv): IProjectInfo => {
+export const generateProjectInfo = (env: ImportMetaEnv): IProjectInfo => {
 
     // @ts-ignore
     const { name, version, dependencies = {} } = pkg
@@ -52,7 +52,7 @@ const generateProjectInfo = (env: ImportMetaEnv): IProjectInfo => {
  * @export
  * @returns {*}  {string}
  */
-const getAvailableIPv4HostIP = (): string => {
+export const getAvailableIPv4HostIP = (): string => {
 
     const _address = networkInterfaces().en0?.find(details => !details.internal && details.family === "IPv4")?.address
     if (!_address) {
@@ -74,7 +74,7 @@ const getAvailableIPv4HostIP = (): string => {
  * @param {string} gitStorageDir - Git 存放目录 例如: 项目根目录
  * @returns {string} - 远程仓库名称
  */
-const getRemoteRepositoryName = (gitStorageDir: string): string => {
+export const getRemoteRepositoryName = (gitStorageDir: string): string => {
 
     /** 远程仓库名称 */
     let _remoteName = ""
@@ -135,7 +135,7 @@ interface ISetupVitePWAParam {
  * @param {ISetupVitePWAParam} param - 参数
  * @returns {*}  {any[]}
  */
-const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
+export const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
 
     const {
         projectRootDir,
@@ -239,5 +239,3 @@ const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
     })
 
 }
-
-export { generateProjectInfo, getAvailableIPv4HostIP, setupVitePWAPlugin, getRemoteRepositoryName }

@@ -1,8 +1,8 @@
 /*
  * @Author: dyb-dev
  * @Date: 2024-09-05 14:15:50
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-09 19:58:29
+ * @LastEditors: v_zhgtzhong
+ * @LastEditTime: 2025-08-01 00:30:33
  * @FilePath: /vant-pro/src/components/ListPro/hooks/useListPagination.ts
  * @Description: 列表分页器
  */
@@ -12,17 +12,18 @@ import { usePagination } from "./usePagination"
 import type { IUsePaginationOptions, IUsePaginationReturn, TPaginationDataItem } from "./usePagination"
 
 /** 列表分页配置，继承自 IUsePaginationOptions */
-interface IUseListPaginationOptions<T extends TPaginationDataItem>
+export interface IUseListPaginationOptions<T extends TPaginationDataItem>
     extends Omit<IUsePaginationOptions<T>, "usePreviousDataOnFail"> {}
 
 /** 列表分页返回结果，继承自 IUsePaginationReturn */
-interface IUseListPaginationReturn<T extends TPaginationDataItem> extends Omit<IUsePaginationReturn<T>, "refresh" | "prev"> {
+export interface IUseListPaginationReturn<T extends TPaginationDataItem>
+    extends Omit<IUsePaginationReturn<T>, "refresh" | "prev"> {
     /** 清空所有数据并刷新首页 */
     clearRefresh: () => Promise<void>
 }
 
 /**
- * 列表分页器
+ * HOOKS: 列表分页器
  *
  * @author dyb-dev
  * @date 05/09/2024/  14:19:07
@@ -30,7 +31,9 @@ interface IUseListPaginationReturn<T extends TPaginationDataItem> extends Omit<I
  * @param {IUseListPaginationOptions<T>} options 列表分页配置
  * @returns {*}  {IUseListPaginationReturn<T>} 列表分页返回结果
  */
-const useListPagination = <T extends TPaginationDataItem>(options: IUseListPaginationOptions<T>): IUseListPaginationReturn<T> => {
+export const useListPagination = <T extends TPaginationDataItem>(
+    options: IUseListPaginationOptions<T>
+): IUseListPaginationReturn<T> => {
 
     // 调用 usePagination 并传入参数
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -103,7 +106,3 @@ const useListPagination = <T extends TPaginationDataItem>(options: IUseListPagin
     }
 
 }
-
-export type { IUseListPaginationOptions, IUseListPaginationReturn }
-
-export { useListPagination }

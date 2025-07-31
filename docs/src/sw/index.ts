@@ -4,7 +4,7 @@
  * @author dyb-dev
  * @date 24/04/2024/  10:54:36
  */
-const setupServiceWorker = async() => {
+export const setupServiceWorker = async() => {
 
     try {
 
@@ -34,5 +34,3 @@ const setupServiceWorker = async() => {
     }
 
 }
-
-export { setupServiceWorker }

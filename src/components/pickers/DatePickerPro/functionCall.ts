@@ -1,9 +1,9 @@
 /*
  * @Author: dyb-dev
  * @Date: 2024-09-02 15:13:31
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 11:39:37
- * @FilePath: /vant-pro/src/components/picker/DatePickerPro/functionCall.ts
+ * @LastEditors: v_zhgtzhong
+ * @LastEditTime: 2025-08-01 00:35:33
+ * @FilePath: /vant-pro/src/components/pickers/DatePickerPro/functionCall.ts
  * @Description: 函数式调用模块
  */
 
@@ -16,10 +16,10 @@ import type { IDatePickerProProps } from "./index.vue"
 import type { TShowPickerProBaseResult } from "../type"
 
 /** 显示日期选择器增强版的选项 */
-type TShowDatePickerProOptions = TFilteredDefaultOptions<IDatePickerProProps>
+export type TShowDatePickerProOptions = TFilteredDefaultOptions<IDatePickerProProps>
 
 /**
- * 显示日期选择器增强版
+ * FUN: 显示日期选择器增强版
  *
  * @author dyb-dev
  * @date 29/02/2024/  23:43:04
@@ -27,14 +27,10 @@ type TShowDatePickerProOptions = TFilteredDefaultOptions<IDatePickerProProps>
  * @param {TShowDatePickerProOptions} [options] 弹窗参数
  * @returns {*}  {Promise<TDatePickerProResult>} 弹窗结果
  */
-const showDatePickerPro = (options: TShowDatePickerProOptions): Promise<TShowPickerProBaseResult> => {
+export const showDatePickerPro = (options: TShowDatePickerProOptions): Promise<TShowPickerProBaseResult> => {
 
     return mountComponent<TShowDatePickerProOptions, TShowPickerProBaseResult>(DatePickerPro, {
         ...options
     })
 
 }
-
-export type { TShowDatePickerProOptions }
-
-export { showDatePickerPro }

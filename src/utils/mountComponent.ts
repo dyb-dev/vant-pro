@@ -1,8 +1,8 @@
 /*
  * @Author: dyb-dev
  * @Date: 2024-08-31 23:28:33
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-29 20:26:57
+ * @LastEditors: v_zhgtzhong
+ * @LastEditTime: 2025-08-01 00:34:09
  * @FilePath: /vant-pro/src/utils/mountComponent.ts
  * @Description: 挂载组件基础方法
  */
@@ -13,22 +13,22 @@ import { createApp, type Component } from "vue"
 let mountComponentSelector: string = "#app"
 
 /**
- * 获取挂载组件的根节点选择器
+ * FUN: 获取挂载组件的根节点选择器
  *
  * @returns {string} 返回根节点选择器 默认为 `#app`，如果#app不存在则使用 `document.body`
  */
-const getMountComponentSelector = (): string => {
+export const getMountComponentSelector = (): string => {
 
     return mountComponentSelector
 
 }
 
 /**
- * 设置挂载组件的根节点选择器
+ * FUN: 设置挂载组件的根节点选择器
  *
  * @param {string} selector - 新的根节点选择器 默认为 `#app`，如果#app不存在则使用 `document.body`
  */
-const setMountComponentSelector = (selector: string) => {
+export const setMountComponentSelector = (selector: string) => {
 
     if (selector) {
 
@@ -41,7 +41,7 @@ const setMountComponentSelector = (selector: string) => {
 /**
  * 默认选项接口
  */
-interface IDefaultOptions {
+export interface IDefaultOptions {
     /** 是否显示 */
     show: boolean
     /** 卸载 */
@@ -53,10 +53,10 @@ interface IDefaultOptions {
  *
  * @template Target - 目标类型
  */
-type TFilteredDefaultOptions<Target> = Omit<Target, TKeys<IDefaultOptions>>
+export type TFilteredDefaultOptions<Target> = Omit<Target, TKeys<IDefaultOptions>>
 
 /**
- * 挂载组件
+ * FUN: 挂载组件
  *
  * @author dyb-dev
  * @date 01/09/2024/  16:52:46
@@ -66,7 +66,7 @@ type TFilteredDefaultOptions<Target> = Omit<Target, TKeys<IDefaultOptions>>
  * @param {TFilteredDefaultOptions<Options>} [options] - 参数
  * @returns {*}  {Promise<Result>} 返回组件的动作类型
  */
-const mountComponent = <Options extends Record<string, any> = Record<string, any>, Result extends any[] = any[]>(
+export const mountComponent = <Options extends Record<string, any> = Record<string, any>, Result extends any[] = any[]>(
     component: Component,
     options?: TFilteredDefaultOptions<Options>
 ): Promise<Result> => {
@@ -95,6 +95,3 @@ const mountComponent = <Options extends Record<string, any> = Record<string, any
     })
 
 }
-
-export type { IDefaultOptions, TFilteredDefaultOptions }
-export { mountComponent, getMountComponentSelector, setMountComponentSelector }
