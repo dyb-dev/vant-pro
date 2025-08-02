@@ -1,6 +1,6 @@
 {
     "name": "@dyb-dev/vant-pro",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "基于 Vue3 + TS + Vant 二次封装的移动端组件库",
     "author": "dyb-dev",
     "license": "MIT",

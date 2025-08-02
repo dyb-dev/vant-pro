@@ -1,8 +1,8 @@
 /*
  * @Author: dyb-dev
  * @Date: 2024-10-16 01:08:35
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:29:02
+ * @LastEditors: dyb-dev
+ * @LastEditTime: 2025-08-02 19:25:14
  * @FilePath: /vant-pro/docs/src/utils/env/index.ts
  * @Description: 环境相关工具函数
  */
@@ -10,13 +10,13 @@
 import { getCurrentUrlQueryValue } from "@/utils"
 
 /**
- * FUN: 是否为浏览器环境
+ * FUN: 是否为客户端环境
  *
  * @author dyb-dev
- * @date 16/10/2024/  00:08:48
- * @returns {*}  {boolean} 是否为浏览器环境
+ * @date 2025-07-21 21:41:48
+ * @returns {*}  {boolean} 是否为客户端环境
  */
-export const isBrowserEnv = (): boolean => typeof window !== "undefined"
+export const isClientEnv = (): boolean => typeof window !== "undefined" && typeof document !== "undefined"
 
 /**
  * FUN: 是否为开发环境
