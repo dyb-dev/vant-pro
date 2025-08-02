@@ -1,6 +1,6 @@
 {
     "name": "@dyb-dev/vant-pro",
-    "version": "0.0.16",
+    "version": "0.1.0",
     "description": "基于 Vue3 + TS + Vant 二次封装的移动端组件库",
     "author": "dyb-dev",
     "license": "MIT",
@@ -103,7 +103,7 @@
         "vitepress": "~1.3.4",
         "vue": "~3.4.38",
         "vue-tsc": "^2.1.6",
-        "vue3-json-viewer": "^2.2.2",
+        "vue3-json-viewer": "~2.2.2",
         "workbox-cacheable-response": "^7.1.0",
         "workbox-core": "^7.1.0",
         "workbox-precaching": "^7.1.0",

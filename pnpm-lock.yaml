@@ -105,7 +105,7 @@ importers:
         specifier: ^2.1.6
         version: 2.1.6(typescript@5.6.3)
       vue3-json-viewer:
-        specifier: ^2.2.2
+        specifier: ~2.2.2
         version: 2.2.2(vue@3.4.38(typescript@5.6.3))
       workbox-cacheable-response:
         specifier: ^7.1.0
