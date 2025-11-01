@@ -6,7 +6,7 @@ import ViteDts from "vite-plugin-dts"
 
 import pkg from "./package.json"
 
-/** STATIC: 项目根目录 */
+/** CONST: 项目根目录 */
 const projectRootDir = process.cwd()
 
 export default defineConfig({
@@ -25,6 +25,15 @@ export default defineConfig({
             tsconfigPath: "./tsconfig.app.json"
         })
     ],
+
+    esbuild: {
+        // 移除 console.log 语句
+        pure: ["console.log"],
+        // 移除 debugger 语句
+        drop: ["debugger"],
+        // 移除 所有注释
+        legalComments: "none"
+    },
 
     build: {
         outDir: resolve(projectRootDir, "./dist"),

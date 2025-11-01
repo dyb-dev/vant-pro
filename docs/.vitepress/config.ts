@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-22 15:43:15
+ * @LastEditTime: 2025-11-01 11:14:02
  * @FilePath: /vant-pro/docs/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -22,26 +22,26 @@ import { generateProjectInfo, getAvailableIPv4HostIP, setupVitePWAPlugin } from 
 
 import type { UserConfigFn, DefaultTheme } from "vitepress"
 
-/** STATIC: 顶部菜单配置 */
+/** CONST: 顶部菜单配置 */
 const nav: DefaultTheme.NavItem[] = [
     { text: "首页", link: "/" },
     { text: "文档", link: docsSidebar.rootFilePath },
     { text: "参考", link: referenceSidebar.rootFilePath }
 ]
 
-/** STATIC: 左侧边栏菜单配置 */
+/** CONST: 左侧边栏菜单配置 */
 const sidebar: DefaultTheme.Sidebar = { ...docsSidebar.config, ...referenceSidebar.config }
 
-/** STATIC: 项目根目录 */
+/** CONST: 项目根目录 */
 const projectRootDir = resolve(__dirname, "../")
 
-/** STATIC: 是否开发模式 */
+/** CONST: 是否开发模式 */
 const isDevMode = process.env.NODE_ENV === "development"
 
 // VitePress配置 示例:(https://vitepress.dev/zh/reference/site-config)
 const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
 
-    /** STATIC: 获取.env文件的环境变量 */
+    /** CONST: 获取.env文件的环境变量 */
     const _env = loadEnv(mode, resolve(projectRootDir, "../")) as unknown as ImportMetaEnv
 
     const {
@@ -56,25 +56,25 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
         VITE_PWA
     } = _env
 
-    /** STATIC: 项目信息 */
+    /** CONST: 项目信息 */
     const __PROJECT_INFO__ = generateProjectInfo(_env)
 
-    /** STATIC: 路径参数 */
+    /** CONST: 路径参数 */
     const _query = `?version=${__PROJECT_INFO__.version}`
 
-    /** STATIC: logo路径 需要加版本号保证PWA模式下正常离线缓存 */
+    /** CONST: logo路径 需要加版本号保证PWA模式下正常离线缓存 */
     const _logoPath = `/image/logo.png${_query}`
 
-    /** STATIC: 图标路径前缀 */
+    /** CONST: 图标路径前缀 */
     const _faviconPathPrefix = isDevMode ? "" : VITE_BASE_PATH
 
-    /** STATIC: favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
+    /** CONST: favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
     const _faviconPath = `${_faviconPathPrefix}/image/favicon.ico${_query}`
 
-    /** STATIC: 端口号 */
+    /** CONST: 端口号 */
     const _port = getPort(~~VITE_PORT)
 
-    /** STATIC: 浏览器打开地址 */
+    /** CONST: 浏览器打开地址 */
     const _browserOpenUrl = `${VITE_PROTOCOL}://${getAvailableIPv4HostIP()}:${_port}`
 
     return defineConfig({
@@ -312,6 +312,15 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                         // rewrite: (path) => path.replace(/^\/api/, ""),
                     }
                 }
+            },
+
+            esbuild: {
+                // 移除 console.log 语句
+                pure: ["console.log"],
+                // 移除 debugger 语句
+                drop: ["debugger"],
+                // 移除 所有注释
+                legalComments: "none"
             }
         }
     })

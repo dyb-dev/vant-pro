@@ -144,16 +144,16 @@ export const setupVitePWAPlugin = (param: ISetupVitePWAParam): any[] => {
     } = param
     const { VITE_OUT_DIR } = env
 
-    /** STATIC: icon路径前缀 */
+    /** CONST: icon路径前缀 */
     const _iconsPathPrefix = "/image/sw/"
 
-    /** STATIC: 资源路径参数 */
+    /** CONST: 资源路径参数 */
     const _assetsPathParam = `?version=${version}`
 
-    /** STATIC: 哈希文件名的正则表达式模式 */
+    /** CONST: 哈希文件名的正则表达式模式 */
     const _hashPattern = /\..{8}\./
 
-    /** STATIC: 输出目录绝对路径 */
+    /** CONST: 输出目录绝对路径 */
     const _outDirAbsolutePath = resolve(projectRootDir, `./${VITE_OUT_DIR}`)
 
     return VitePWA({

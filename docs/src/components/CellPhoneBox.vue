@@ -24,16 +24,16 @@ const data = reactive({
 /** COMPUTED: 主题模式 */
 const themeMode = computed(() => data.siteConfig.isDark ? "dark" : "light")
 
-/** STATIC: 盒子类名 */
+/** CONST: 盒子类名 */
 const BOX_CLASS_NAME = "cell-phone-box"
 
 /** REF: 元素 */
 const boxElement = ref<HTMLElement>()
 
-/** STATIC: 盒子元素最大宽度 */
+/** CONST: 盒子元素最大宽度 */
 const BOX_MAX_WIDTH = 375
 
-/** STATIC: 盒子元素最大高度 */
+/** CONST: 盒子元素最大高度 */
 const BOX_MAX_HEIGHT = 667
 
 /** REF: 元素高度 */

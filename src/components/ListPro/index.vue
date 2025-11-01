@@ -250,7 +250,7 @@ const onLoad = () => {
 
 }
 
-/** STATIC: 根元素类名 */
+/** CONST: 根元素类名 */
 const rootClassName = "vant-pro-list-pro"
 
 // HOOKS: 获取传入插槽

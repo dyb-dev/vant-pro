@@ -1,12 +1,12 @@
 import type { DefaultTheme } from "vitepress"
 
-/** STATIC: `左侧边栏` 对应根目录 */
+/** CONST: `左侧边栏` 对应根目录 */
 const rootDir = "/reference"
 
-/** STATIC: `左侧边栏` 对应根文件路径 */
+/** CONST: `左侧边栏` 对应根文件路径 */
 const rootFilePath = `${rootDir}/`
 
-/** STATIC: `左侧边栏` 链接映射配置 */
+/** CONST: `左侧边栏` 链接映射配置 */
 const config: DefaultTheme.Sidebar = {
     [rootDir]: [
         {
@@ -31,7 +31,7 @@ const config: DefaultTheme.Sidebar = {
     ]
 }
 
-/** STATIC: `左侧边栏` 配置 */
+/** CONST: `左侧边栏` 配置 */
 const sidebar = {
     rootDir,
     rootFilePath,

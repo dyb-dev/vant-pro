@@ -28,7 +28,7 @@ const data: IData = reactive({
 /** REF: 手机盒子实例 */
 const cellPhoneBox = ref<InstanceType<typeof CellPhoneBox>>()
 
-/** STATIC: 数据 */
+/** CONST: 数据 */
 const columns = [
     {
         cityName: "浙江",
@@ -58,7 +58,7 @@ const columns = [
     }
 ]
 
-/** STATIC: 字段名映射 */
+/** CONST: 字段名映射 */
 const columnsFieldNames = {
     text: "cityName",
     value: "cityName",
