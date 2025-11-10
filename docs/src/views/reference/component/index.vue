@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="tsx">
 import { StarTwoTone } from "@ant-design/icons-vue"
 import { theme, App, Space, Tag } from "ant-design-vue"
 import { useData } from "vitepress"

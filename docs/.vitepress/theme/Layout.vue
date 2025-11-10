@@ -7,7 +7,7 @@
  * @Description: 自定义vitepress主题组件
 -->
 
-<script setup lang="ts">
+<script setup lang="tsx">
 import { theme, ConfigProvider } from "ant-design-vue"
 // 由于Ant组件默认: 英文版本，所以需要导入Ant组件中文版本
 import zhCN from "ant-design-vue/lib/locale/zh_CN"

@@ -7,7 +7,7 @@
  * @Description: 列表分页组件增强版(基于 vant 的 `PullRefresh`、`List`、`BackTop`、`Empty`、`Highlight` 组件)
 -->
 
-<script setup lang="ts">
+<script setup lang="tsx">
 defineOptions({
     /** 设置组件名 */
     name: "ListPro"

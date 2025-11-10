@@ -1,6 +1,7 @@
 import { resolve } from "path"
 
 import ViteVue from "@vitejs/plugin-vue"
+import ViteVueJsx from "@vitejs/plugin-vue-jsx"
 import { defineConfig } from "vite"
 import ViteDts from "vite-plugin-dts"
 
@@ -13,6 +14,8 @@ export default defineConfig({
     plugins: [
         // 处理和编译 .vue 文件
         ViteVue(),
+        // 处理和编译 .vue jsx/tsx 文件
+        ViteVueJsx(),
         // 生成ts声明文件
         ViteDts({
             // 指定要生成.d.ts的源文件 默认: tsconfig.app.json 的 `include` 选项

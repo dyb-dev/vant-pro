@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="tsx">
 import { App, Button, Space } from "ant-design-vue"
 import dayjs from "dayjs"
 // @ts-ignore

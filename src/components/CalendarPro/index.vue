@@ -7,7 +7,7 @@
  * @Description: 日历组件增强版(基于 vant 的 `Calendar` 组件)
 -->
 
-<script setup lang="ts">
+<script setup lang="tsx">
 defineOptions({
     /** 设置组件名 */
     name: "CalendarPro"

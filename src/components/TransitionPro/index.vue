@@ -7,7 +7,7 @@
  * @Description: 过渡动画组件增强版(基于 `Vue3` 的 `Transition`、`TransitionGroup` 组件)
 -->
 
-<script setup lang="ts">
+<script setup lang="tsx">
 defineOptions({
     /** 设置组件名 */
     name: "TransitionPro"
