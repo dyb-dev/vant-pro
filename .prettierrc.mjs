@@ -1,10 +1,10 @@
 /*
  * @Author: 丁雁兵
  * @Date: 2024-02-27 21:21:41
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-30 17:22:56
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2025-11-15 13:11:08
  * @FilePath: /vant-pro/.prettierrc.mjs
- * @Description: prettier配置文件 注意：每次配置文件的更改，建议重启一下vscode，否则可能不会生效
+ * @Description: prettier 配置 注意：每次配置的更改，建议重启一下编辑器，否则可能不会生效
  */
 
 import prettierConfig from "@dyb-dev/prettier-config"
