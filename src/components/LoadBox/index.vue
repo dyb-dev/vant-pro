@@ -21,45 +21,51 @@ export type TLoadBoxStatus = "loading" | "success" | "fail"
 
 export interface ILoadBoxProps {
     /**
-     * @description 状态，可选值为 'loading' | 'success' | 'fail'
+     * 状态，可选值为 'loading' | 'success' | 'fail'
+     *
      * @default 'loading'
      */
     status: TLoadBoxStatus
     /**
-     * @description 自定义图标，优先级高于 loadingIcon、failIcon
+     * 自定义图标，优先级高于 loadingIcon、failIcon
      */
     icon?: LoadingType | string
     /**
-     * @description 自定义描述，优先级高于 loadingText、failText
+     * 自定义描述，优先级高于 loadingText、failText
      */
     text?: string
     /**
-     * @description 加载中的图标
+     * 加载中的图标
+     *
      * @default circular
      */
     loadingIcon?: LoadingType
     /**
-     * @description 加载中的描述
+     * 加载中的描述
+     *
      * @default "正在载入"
      */
     loadingText?: string
     /**
-     * @description 加载失败的图标
+     * 加载失败的图标
+     *
      * @default "replay"
      */
     failIcon?: string
     /**
-     * @description 加载失败的描述
+     * 加载失败的描述
+     *
      * @default "加载失败，请点击重试~"
      */
     failText?: string
     /**
-     * @description icon和文本颜色
+     * icon和文本颜色
+     *
      * @default "var(--van-loading-spinner-color)"
      */
     color?: string
     /**
-     * @description 重新加载函数
+     * 重新加载函数
      */
     retryLoadFn: () => void
 }

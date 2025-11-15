@@ -29,47 +29,52 @@ export type THighlightProps = TModifyProperties<Partial<HighlightProps>, "keywor
 
 export interface IListProProps {
     /**
-     * @description 是否启用顶部描述
+     * 是否启用顶部描述
+     *
      * @default true
      */
     enableTopDesc?: boolean
     /**
-     * @description 是否启用数据为空时元素占位
+     * 是否启用数据为空时元素占位
+     *
      * @default true
      */
     enableEmptyPlaceholder?: boolean
     /**
-     * @description 是否启用 back-top 按钮
+     * 是否启用 back-top 按钮
+     *
      * @default true
      */
     enableBackTop?: boolean
     /**
-     * @description vant `PullRefresh` 组件的属性
+     * vant `PullRefresh` 组件的属性
      */
     pullRefreshProps?: TPullRefreshProps
     /**
-     * @description vant `Highlight` 组件的属性
+     * vant `Highlight` 组件的属性
      */
     highlightProps?: THighlightProps
     /**
-     * @description vant `Empty` 组件的属性
+     * vant `Empty` 组件的属性
      */
     emptyProps?: EmptyProps
     /**
-     * @description vant `List` 组件的属性
+     * vant `List` 组件的属性
      */
     listProps?: TListProps
     /**
-     * @description vant `BackTop` 组件的属性
+     * vant `BackTop` 组件的属性
      */
     backTopProps?: Partial<BackTopProps>
     /**
-     * @description 每页数据大小
+     * 每页数据大小
+     *
      * @default 10
      */
     pageSize?: number
     /**
-     * @description 请求数据的方法
+     * 请求数据的方法
+     *
      * @param param 请求参数
      * @returns 数据返回值
      */

@@ -35,77 +35,88 @@ export type TAreaPickerProUnmountParam = [TAreaPickerProSelectedResult]
 
 export interface IAreaPickerProProps {
     /**
-     * @description 是否显示
+     * 是否显示
      */
     show: boolean
     /**
-     * @description 卸载组件 `用于函数式调用`
+     * 卸载组件 `用于函数式调用`
+     *
      * @param ares 卸载回调参数
      */
     unmount?: (...ares: TAreaPickerProUnmountParam) => void
     /**
-     * @description 地区数据对象
+     * 地区数据对象
      */
     areaList?: TAreaPickerProData
     /**
-     * @description 地区选择器的值
+     * 地区选择器的值
      */
     pickerValue?: (string | number)[]
     /**
-     * @description 选择的地区编码
+     * 选择的地区编码
      */
     areaCode?: string
     /**
-     * @description 顶部栏标题
+     * 顶部栏标题
+     *
      * @default 请选择
      */
     title?: string
     /**
-     * @description 确认按钮文字，设置为空字符串可以隐藏按钮
+     * 确认按钮文字，设置为空字符串可以隐藏按钮
+     *
      * @default 确认
      */
     confirmButtonText?: string
     /**
-     * @description 取消按钮文字，设置为空字符串可以隐藏按钮
+     * 取消按钮文字，设置为空字符串可以隐藏按钮
+     *
      * @default 取消
      */
     cancelButtonText?: string
     /**
-     * @description 可见的选项个数
+     * 可见的选项个数
+     *
      * @default 6
      */
     visibleOptionNum?: number
     /**
-     * @description 选择的地区等级，如果没有传递 `areaType` 时会根据 `areaList` 的长度来决定
+     * 选择的地区等级，如果没有传递 `areaType` 时会根据 `areaList` 的长度来决定
+     *
      * @default district
      */
     areaType?: TAreaPickerProType
     /**
-     * @description 列占位提示文字
+     * 列占位提示文字
+     *
      * @default []
      */
     columnsPlaceholder?: string[]
     /**
-     * @description 选项高度，支持 px, vw, vh, rem 单位，默认 px
+     * 选项高度，支持 px, vw, vh, rem 单位，默认 px
+     *
      * @default 44
      */
     optionHeight?: number | string
     /**
-     * @description 快速滑动时惯性滚动的时长，单位 ms
+     * 快速滑动时惯性滚动的时长，单位 ms
+     *
      * @default 1000
      */
     swipeDuration?: number | string
     /**
-     * @description 是否锁定背景滚动
+     * 是否锁定背景滚动
+     *
      * @default true
      */
     lockScroll?: boolean
     /**
-     * @description 指定挂载的节点，等同于 Teleport 组件的 to 属性
+     * 指定挂载的节点，等同于 Teleport 组件的 to 属性
      */
     teleport?: string | Element
     /**
-     * @description 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
+     * 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
+     *
      * @param selectedResult 选择结果
      * @returns {boolean | Promise<boolean>} 返回 false 可阻止关闭
      */

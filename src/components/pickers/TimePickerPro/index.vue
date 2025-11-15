@@ -17,116 +17,134 @@ import type { PickerOption, TimePickerColumnType } from "vant"
 
 export interface ITimePickerProProps {
     /**
-     * @description 是否显示
+     * 是否显示
      */
     show: boolean
     /**
-     * @description 卸载组件 `用于函数式调用`
+     * 卸载组件 `用于函数式调用`
+     *
      * @param ares 卸载回调参数
      */
     unmount?: (...ares: TPickerProBaseUnmountParam) => void
     /**
-     * @description 时间选择器的值
+     * 时间选择器的值
      */
     pickerValue?: string[]
     /**
-     * @description 选项类型，由 hour、minute 和 second 组成的数组
+     * 选项类型，由 hour、minute 和 second 组成的数组
+     *
      * @default ['hour', 'minute']
      */
     columnsType?: TimePickerColumnType[]
     /**
-     * @description 可选的最小小时
+     * 可选的最小小时
+     *
      * @default 0
      */
     minHour?: number | string
     /**
-     * @description 可选的最大小时
+     * 可选的最大小时
+     *
      * @default 23
      */
     maxHour?: number | string
     /**
-     * @description 可选的最小分钟
+     * 可选的最小分钟
+     *
      * @default 0
      */
     minMinute?: number | string
     /**
-     * @description 可选的最大分钟
+     * 可选的最大分钟
+     *
      * @default 59
      */
     maxMinute?: number | string
     /**
-     * @description 可选的最小秒数
+     * 可选的最小秒数
+     *
      * @default 0
      */
     minSecond?: number | string
     /**
-     * @description 可选的最大秒数
+     * 可选的最大秒数
+     *
      * @default 59
      */
     maxSecond?: number | string
     /**
-     * @description 可选的最小时间，格式参考 07:40:00，使用时 min-hour、min-minute、min-second 不会生效
+     * 可选的最小时间，格式参考 07:40:00，使用时 min-hour、min-minute、min-second 不会生效
      */
     minTime?: string
     /**
-     * @description 可选的最大时间，格式参考 10:20:00，使用时 max-hour、max-minute、max-second 不会生效
+     * 可选的最大时间，格式参考 10:20:00，使用时 max-hour、max-minute、max-second 不会生效
      */
     maxTime?: string
     /**
-     * @description 顶部栏标题
+     * 顶部栏标题
+     *
      * @default 请选择时间
      */
     title?: string
     /**
-     * @description 确认按钮文字，设置为空字符串可以隐藏按钮
+     * 确认按钮文字，设置为空字符串可以隐藏按钮
+     *
      * @default 确认
      */
     confirmButtonText?: string
     /**
-     * @description 取消按钮文字，设置为空字符串可以隐藏按钮
+     * 取消按钮文字，设置为空字符串可以隐藏按钮
+     *
      * @default 取消
      */
     cancelButtonText?: string
     /**
-     * @description 可见的选项个数
+     * 可见的选项个数
+     *
      * @default 6
      */
     visibleOptionNum?: number
     /**
-     * @description 选项高度，支持 px, vw, vh, rem 单位，默认 px
+     * 选项高度，支持 px, vw, vh, rem 单位，默认 px
+     *
      * @default 44
      */
     optionHeight?: number | string
     /**
-     * @description 快速滑动时惯性滚动的时长，单位 ms
+     * 快速滑动时惯性滚动的时长，单位 ms
+     *
      * @default 1000
      */
     swipeDuration?: number | string
     /**
-     * @description 是否锁定背景滚动
+     * 是否锁定背景滚动
+     *
      * @default true
      */
     lockScroll?: boolean
     /**
-     * @description 指定挂载的节点，等同于 Teleport 组件的 to 属性
+     * 指定挂载的节点，等同于 Teleport 组件的 to 属性
      */
     teleport?: string | Element
     /**
-     * @description 选项过滤函数
+     * 选项过滤函数
+     *
      * @param type 选项类型
      * @param options 当前可选项
      * @returns {PickerOption[]} 返回过滤后的选项
      */
     filter?: (type: TimePickerColumnType, options: PickerOption[]) => PickerOption[]
     /**
-     * @description 选项格式化函数
+     * 选项格式化函数
+     *
      * @param type 选项类型
      * @param option 当前选项
      * @returns {PickerOption} 返回格式化后的选项
      */
     formatter?: (type: TimePickerColumnType, option: PickerOption) => PickerOption
     /**
-     * @description 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
+     * 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
+     *
      * @param selectedResult 选择结果
      * @returns {boolean | Promise<boolean>} 返回 false 可阻止关闭
      */

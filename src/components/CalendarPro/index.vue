@@ -22,193 +22,223 @@ export type TCalendarProUnmountParam = [TCalendarProSelectDate]
 
 export interface ICalendarProProps {
     /**
-     * @description 是否显示
+     * 是否显示
      */
     show: boolean
     /**
-     * @description 选择的日期，组件式调用时使用
+     * 选择的日期，组件式调用时使用
      */
     selectDate?: TCalendarProSelectDate
     /**
-     * @description 卸载组件 `用于函数式调用`
+     * 卸载组件 `用于函数式调用`
+     *
      * @param ares 卸载回调参数
      */
     unmount?: (...ares: TCalendarProUnmountParam) => void
     /**
-     * @description 选择类型：'single' 表示单选，'multiple' 表示多选，'range' 表示范围选择
+     * 选择类型：'single' 表示单选，'multiple' 表示多选，'range' 表示范围选择
+     *
      * @default "single"
      */
     type?: CalendarType
     /**
-     * @description 切换模式：
+     * 切换模式：
      * 'none' 表示平铺展示所有月份，不展示切换按钮，
      * 'month' 支持按月切换，展示上个月/下个月按钮，
      * 'year-month' 支持按年切换，也支持按月切换，展示上一年/下一年，上个月/下个月按钮
+     *
      * @default "year-month"
      */
     switchMode?: CalendarProps["switchMode"]
     /**
-     * @description 日历标题
+     * 日历标题
+     *
      * @default "日期选择"
      */
     title?: string
     /**
-     * @description 可选择的最小日期
+     * 可选择的最小日期
+     *
      * @default 10年前
      */
     minDate?: Date
     /**
-     * @description 可选择的最大日期
+     * 可选择的最大日期
+     *
      * @default 10年后
      */
     maxDate?: Date
     /**
-     * @description 默认选中的日期，type 为 multiple 或 range 时为数组，传入 null 表示默认不选择
+     * 默认选中的日期，type 为 multiple 或 range 时为数组，传入 null 表示默认不选择
+     *
      * @default 今天
      */
     defaultDate?: Date | Date[] | null
     /**
-     * @description 日期行高
+     * 日期行高
+     *
      * @default 64
      */
     rowHeight?: number | string
     /**
-     * @description 日期格式化函数
+     * 日期格式化函数
      */
     formatter?: (day: CalendarDayItem) => CalendarDayItem
     /**
-     * @description 是否只渲染可视区域的内容
+     * 是否只渲染可视区域的内容
+     *
      * @default true
      */
     lazyRender?: boolean
     /**
-     * @description 是否显示月份背景水印
+     * 是否显示月份背景水印
+     *
      * @default true
      */
     showMark?: boolean
     /**
-     * @description 是否展示日历标题
+     * 是否展示日历标题
+     *
      * @default true
      */
     showTitle?: boolean
     /**
-     * @description 是否展示日历副标题（年月）
+     * 是否展示日历副标题（年月）
+     *
      * @default true
      */
     showSubtitle?: boolean
     /**
-     * @description 是否展示确认按钮
+     * 是否展示确认按钮
+     *
      * @default false
      */
     showConfirm?: boolean
     /**
-     * @description 是否为只读状态，只读状态下不能选择日期
+     * 是否为只读状态，只读状态下不能选择日期
+     *
      * @default false
      */
     readonly?: boolean
     /**
-     * @description 确认按钮的文字
+     * 确认按钮的文字
+     *
      * @default "确定"
      */
     confirmText?: string
     /**
-     * @description 确认按钮处于禁用状态时的文字
+     * 确认按钮处于禁用状态时的文字
+     *
      * @default "确定"
      */
     confirmDisabledText?: string
     /**
-     * @description 设置周起始日，0 表示周日，1 表示周一，依此类推
+     * 设置周起始日，0 表示周日，1 表示周一，依此类推
+     *
      * @default 1
      */
     firstDayOfWeek?: TNumberRange<0, 6>
 
     /**
-     * @description 日期区间最多可选天数（当 type 为 range、multiple 时有效）
+     * 日期区间最多可选天数（当 type 为 range、multiple 时有效）
+     *
      * @default 无限制
      */
     maxRange?: number | string
     /**
-     * @description 范围选择超过最多可选天数时的提示文案（当 type 为 range、multiple 时有效）
+     * 范围选择超过最多可选天数时的提示文案（当 type 为 range、multiple 时有效）
+     *
      * @default "最多选择 xx 天"
      */
     rangePrompt?: string
     /**
-     * @description 是否展示范围选择提示文案（当 type 为 range 时有效）
+     * 是否展示范围选择提示文案（当 type 为 range 时有效）
+     *
      * @default true
      */
     showRangePrompt?: boolean
     /**
-     * @description 是否允许日期范围的起止时间为同一天（当 type 为 range 时有效）
+     * 是否允许日期范围的起止时间为同一天（当 type 为 range 时有效）
+     *
      * @default false
      */
     allowSameDay?: boolean
     /**
-     * @description 是否以弹层的形式展示日历
+     * 是否以弹层的形式展示日历
+     *
      * @default true
      */
     poppable?: boolean
     /**
-     * @description 是否锁定背景滚动（当 poppable 为 true 时有效）
+     * 是否锁定背景滚动（当 poppable 为 true 时有效）
+     *
      * @default true
      */
     lockScroll?: boolean
     /**
-     * @description 指定挂载的节点，等同于 Teleport 组件的 to 属性（当 poppable 为 true 时有效）
+     * 指定挂载的节点，等同于 Teleport 组件的 to 属性（当 poppable 为 true 时有效）
      */
     teleport?: string | Element
     /**
-     * @description 点击并选中任意日期时触发
+     * 点击并选中任意日期时触发
+     *
      * @param date 选中的日期
      */
     select?: (date: TCalendarProSelectDate) => void
     /**
-     * @description 点击确认按钮后触发
+     * 点击确认按钮后触发
+     *
      * @param date 确认的日期
      */
     confirm?: (date: TCalendarProSelectDate) => void
     /**
-     * @description 打开弹出层时触发（当 poppable 为 true 时有效）
+     * 打开弹出层时触发（当 poppable 为 true 时有效）
      */
     open?: () => void
     /**
-     * @description 关闭弹出层时触发（当 poppable 为 true 时有效）
+     * 关闭弹出层时触发（当 poppable 为 true 时有效）
      */
     close?: () => void
     /**
-     * @description 打开弹出层且动画结束后触发（当 poppable 为 true 时有效）
+     * 打开弹出层且动画结束后触发（当 poppable 为 true 时有效）
      */
     opened?: () => void
     /**
-     * @description 关闭弹出层且动画结束后触发（当 poppable 为 true 时有效）
+     * 关闭弹出层且动画结束后触发（当 poppable 为 true 时有效）
      */
     closed?: () => void
     /**
-     * @description 当日历组件的 type 为 multiple 时，取消选中日期时触发
+     * 当日历组件的 type 为 multiple 时，取消选中日期时触发
+     *
      * @param date 取消选中的日期
      */
     unselect?: (date: Date) => void
     /**
-     * @description 当某个月份进入可视区域时触发
+     * 当某个月份进入可视区域时触发
+     *
      * @param date 当前的日期
      * @param title 当前的月份标题
      */
     monthShow?: (date: Date, title: string) => void
     /**
-     * @description 范围选择超过最多可选天数时触发
+     * 范围选择超过最多可选天数时触发
      */
     overRange?: () => void
     /**
-     * @description 点击日历副标题时触发
+     * 点击日历副标题时触发
+     *
      * @param e 鼠标事件
      */
     clickSubtitle?: (e: MouseEvent) => void
     /**
-     * @description 点击禁用日期时触发
+     * 点击禁用日期时触发
+     *
      * @param date 禁用的日期
      */
     clickDisabledDate?: (date: TCalendarProSelectDate) => void
     /**
-     * @description 日历面板切换时触发
+     * 日历面板切换时触发
+     *
      * @param date 切换到的日期
      */
     panelChange?: (date: Date) => void

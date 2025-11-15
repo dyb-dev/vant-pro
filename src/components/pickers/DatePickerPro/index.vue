@@ -17,88 +17,102 @@ import type { DatePickerColumnType, PickerOption } from "vant"
 
 export interface IDatePickerProProps {
     /**
-     * @description 是否显示
+     * 是否显示
      */
     show: boolean
     /**
-     * @description 卸载组件 `用于函数式调用`
+     * 卸载组件 `用于函数式调用`
+     *
      * @param ares 卸载回调参数
      */
     unmount?: (...ares: TPickerProBaseUnmountParam) => void
     /**
-     * @description 日期选择器的值
+     * 日期选择器的值
      */
     pickerValue?: string[]
     /**
-     * @description 选项类型，由 year、month 和 day 组成的数组
+     * 选项类型，由 year、month 和 day 组成的数组
+     *
      * @default ['year', 'month', 'day']
      */
     columnsType?: DatePickerColumnType[]
     /**
-     * @description 可选的最小时间，精确到日
+     * 可选的最小时间，精确到日
+     *
      * @default 十年前
      */
     minDate?: Date
     /**
-     * @description 可选的最大时间，精确到日
+     * 可选的最大时间，精确到日
+     *
      * @default 十年后
      */
     maxDate?: Date
     /**
-     * @description 顶部栏标题
+     * 顶部栏标题
+     *
      * @default 请选择日期
      */
     title?: string
     /**
-     * @description 确认按钮文字，设置为空字符串可以隐藏按钮
+     * 确认按钮文字，设置为空字符串可以隐藏按钮
+     *
      * @default 确认
      */
     confirmButtonText?: string
     /**
-     * @description 取消按钮文字，设置为空字符串可以隐藏按钮
+     * 取消按钮文字，设置为空字符串可以隐藏按钮
+     *
      * @default 取消
      */
     cancelButtonText?: string
     /**
-     * @description 可见的选项个数
+     * 可见的选项个数
+     *
      * @default 6
      */
     visibleOptionNum?: number
     /**
-     * @description 选项高度，支持 px, vw, vh, rem 单位，默认 px
+     * 选项高度，支持 px, vw, vh, rem 单位，默认 px
+     *
      * @default 44
      */
     optionHeight?: number | string
     /**
-     * @description 快速滑动时惯性滚动的时长，单位 ms
+     * 快速滑动时惯性滚动的时长，单位 ms
+     *
      * @default 1000
      */
     swipeDuration?: number | string
     /**
-     * @description 是否锁定背景滚动
+     * 是否锁定背景滚动
+     *
      * @default true
      */
     lockScroll?: boolean
     /**
-     * @description 指定挂载的节点，等同于 Teleport 组件的 to 属性
+     * 指定挂载的节点，等同于 Teleport 组件的 to 属性
      */
     teleport?: string | Element
     /**
-     * @description 选项过滤函数
+     * 选项过滤函数
+     *
      * @param type 选项类型
      * @param options 当前可选项
      * @returns {PickerOption[]} 返回过滤后的选项
      */
     filter?: (type: DatePickerColumnType, options: PickerOption[]) => PickerOption[]
     /**
-     * @description 选项格式化函数
+     * 选项格式化函数
+     *
      * @param type 选项类型
      * @param option 当前选项
      * @returns {PickerOption} 返回格式化后的选项
      */
     formatter?: (type: DatePickerColumnType, option: PickerOption) => PickerOption
     /**
-     * @description 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
+     * 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
+     *
      * @param selectedResult 选择结果
      * @returns {boolean | Promise<boolean>} 返回 false 可阻止关闭
      */

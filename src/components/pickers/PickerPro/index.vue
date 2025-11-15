@@ -31,90 +31,106 @@ export type TPickerProFetchDataFnReturn = Promise<TPickerProData | void>
 
 export interface IPickerProProps {
     /**
-     * @description 是否显示
+     * 是否显示
      */
     show: boolean
     /**
-     * @description 卸载组件 `用于函数式调用`
+     * 卸载组件 `用于函数式调用`
+     *
      * @param ares 卸载回调参数
      */
     unmount?: (...ares: TPickerProBaseUnmountParam) => void
     /**
-     * @description 当前选中项对应的值
+     * 当前选中项对应的值
+     *
      * @default []
      */
     pickerValue?: (string | number)[]
     /**
-     * @description 对象数组，配置每一列显示的数据
+     * 对象数组，配置每一列显示的数据
+     *
      * @default []
      */
     columns?: TPickerProData
     /**
-     * @description 自定义 columns 结构中的字段
+     * 自定义 columns 结构中的字段
+     *
      * @default { text: 'text', values: 'values', children: 'children' }
      */
     columnsFieldNames?: PickerFieldNames
     /**
-     * @description 是否显示搜索组件，使用搜索功能还需要传入 `fetchDataFn` 函数
+     * 是否显示搜索组件，使用搜索功能还需要传入 `fetchDataFn` 函数
+     *
      * @default false
      */
     showSearch?: boolean
     /**
-     * @description 顶部栏标题
+     * 顶部栏标题
+     *
      * @default 请选择
      */
     title?: string
     /**
-     * @description 确认按钮文字，设置为空字符串可以隐藏按钮
+     * 确认按钮文字，设置为空字符串可以隐藏按钮
+     *
      * @default 确认
      */
     confirmButtonText?: string
     /**
-     * @description 取消按钮文字，设置为空字符串可以隐藏按钮
+     * 取消按钮文字，设置为空字符串可以隐藏按钮
+     *
      * @default 取消
      */
     cancelButtonText?: string
     /**
-     * @description 是否允许选项内容中渲染 HTML
+     * 是否允许选项内容中渲染 HTML
+     *
      * @default false
      */
     allowHtml?: boolean
     /**
-     * @description 请求数据失败提示文案
+     * 请求数据失败提示文案
+     *
      * @default 加载失败，点击重试
      */
     fetchDataFailTipText?: string
     /**
-     * @description 可见的选项个数
+     * 可见的选项个数
+     *
      * @default 6
      */
     visibleOptionNum?: number
     /**
-     * @description 选项高度，支持 px, vw, vh, rem 单位，默认 px
+     * 选项高度，支持 px, vw, vh, rem 单位，默认 px
+     *
      * @default 44
      */
     optionHeight?: number | string
     /**
-     * @description 快速滑动时惯性滚动的时长，单位 ms
+     * 快速滑动时惯性滚动的时长，单位 ms
+     *
      * @default 1000
      */
     swipeDuration?: number | string
     /**
-     * @description 是否锁定背景滚动
+     * 是否锁定背景滚动
+     *
      * @default true
      */
     lockScroll?: boolean
     /**
-     * @description 指定挂载的节点，等同于 Teleport 组件的 to 属性
+     * 指定挂载的节点，等同于 Teleport 组件的 to 属性
      */
     teleport?: string | Element
     /**
-     * @description 获取 Picker 数据的函数，如果 `columns` 不存在时会在弹窗打开时调用该函数获取数据，优先以 `columns` 为准
+     * 获取 Picker 数据的函数，如果 `columns` 不存在时会在弹窗打开时调用该函数获取数据，优先以 `columns` 为准
+     *
      * @returns {TPickerProFetchDataFnReturn} 返回 Picker 数据
      */
     fetchDataFn?: (param: TPickerProFetchDataFnParam) => TPickerProFetchDataFnReturn
     /**
-     * @description 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
+     * 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise
+     *
      * @param selectedResult 选择结果
      * @returns {boolean | Promise<boolean>} 返回 false 可阻止关闭
      */
