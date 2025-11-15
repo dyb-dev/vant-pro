@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-07 21:30:34
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 16:45:11
- * @FilePath: /vant-pro/src/components/picker/type.ts
- * @Description: 选择器组件公共类型
+ * @FileDesc: 选择器组件公共类型
  */
 
 import type { PickerConfirmEventParams } from "vant"

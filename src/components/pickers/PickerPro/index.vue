@@ -1,11 +1,6 @@
 <!--
- * @Author: dyb-dev
- * @Date: 2024-09-06 23:15:42
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 16:53:11
- * @FilePath: /vant-pro/src/components/pickers/PickerPro/index.vue
- * @Description: 选择器增强版组件(基于 vant 的 `Popup`、`Picker`、`Search`、`Loading`、`Icon` 组件)
--->
+ * @FileDesc: 选择器增强版组件(基于 vant 的 `Popup`、`Picker`、`Search`、`Loading`、`Icon` 组件)
+ -->
 
 <script setup lang="ts">
 defineOptions({

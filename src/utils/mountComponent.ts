@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-08-31 23:28:33
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:34:09
- * @FilePath: /vant-pro/src/utils/mountComponent.ts
- * @Description: 挂载组件基础方法
+ * @FileDesc: 挂载组件基础方法
  */
 
 import { createApp, type Component } from "vue"

@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-06-24 19:59:56
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2025-11-15 13:11:28
- * @FilePath: /vant-pro/docs/.vitepress/config.ts
- * @Description: VitePress 配置
+ * @FileDesc: VitePress 配置
  */
 
 import { resolve } from "path"

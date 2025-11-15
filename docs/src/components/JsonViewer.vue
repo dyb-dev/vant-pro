@@ -1,11 +1,6 @@
 <!--
- * @Author: dyb-dev
- * @Date: 2024-08-14 14:22:59
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-18 01:37:19
- * @FilePath: /vant-pro/docs/src/components/JsonViewer.vue
- * @Description: json预览组件（基于`JsonViewer`二次封装）
--->
+ * @FileDesc: json预览组件（基于`JsonViewer`二次封装）
+ -->
 
 <script setup lang="tsx">
 import { useData } from "vitepress"

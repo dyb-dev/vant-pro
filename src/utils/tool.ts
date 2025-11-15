@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-09 00:07:29
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:34:34
- * @FilePath: /vant-pro/src/utils/tool.ts
- * @Description: 常用工具函数
+ * @FileDesc: 常用工具函数
  */
 
 /** 任意函数类型声明 */

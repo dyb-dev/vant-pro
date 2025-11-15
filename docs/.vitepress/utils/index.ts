@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-08-18 01:04:01
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:28:09
- * @FilePath: /vant-pro/docs/.vitepress/utils/index.ts
- * @Description: 构建工具函数模块
+ * @FileDesc: 构建工具函数模块
  */
 
 import { existsSync, readFileSync } from "fs"

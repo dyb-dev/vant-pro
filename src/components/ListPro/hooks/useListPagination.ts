@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-05 14:15:50
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:30:33
- * @FilePath: /vant-pro/src/components/ListPro/hooks/useListPagination.ts
- * @Description: 列表分页器
+ * @FileDesc: 列表分页器
  */
 
 import { usePagination } from "./usePagination"

@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-06-24 19:59:56
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2025-11-15 13:11:33
- * @FilePath: /vant-pro/docs/.vitepress/theme/index.ts
- * @Description: 扩展主题、扩展vue应用配置
+ * @FileDesc: 扩展主题、扩展vue应用配置
  */
 
 // https://vitepress.dev/zh/guide/custom-theme

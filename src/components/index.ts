@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-01 18:23:44
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 16:56:48
- * @FilePath: /vant-pro/src/components/index.ts
- * @Description: 组件模块
+ * @FileDesc: 组件模块
  */
 
 /** 导出日历增强版组件 */

@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-05 02:14:37
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:33:36
- * @FilePath: /vant-pro/src/components/ListPro/hooks/usePagination.ts
- * @Description: 分页器
+ * @FileDesc: 分页器
  */
 
 import { useOffsetPagination } from "@vueuse/core"

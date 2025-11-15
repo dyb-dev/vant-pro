@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-02 15:13:31
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:35:26
- * @FilePath: /vant-pro/src/components/pickers/AreaPickerPro/functionCall.ts
- * @Description: 函数式调用模块
+ * @FileDesc: 函数式调用模块
  */
 
 import { mountComponent } from "#/utils"

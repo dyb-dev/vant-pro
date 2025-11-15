@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-06 23:15:42
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-09 15:22:47
- * @FilePath: /vant-pro/src/components/picker/DatePickerPro/index.ts
- * @Description: 日期选择器增强版组件(基于 vant 的 `Popup`、`DatePicker`、`Loading` 组件)
+ * @FileDesc: 日期选择器增强版组件(基于 vant 的 `Popup`、`DatePicker`、`Loading` 组件)
  */
 
 import { withInstall } from "#/utils"

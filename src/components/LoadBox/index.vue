@@ -1,11 +1,6 @@
 <!--
- * @Author: dyb-dev
- * @Date: 2024-09-03 16:11:45
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 16:32:40
- * @FilePath: /vant-pro/src/components/LoadBox/index.vue
- * @Description: load盒子组件(基于 vant 的 `Loading`、`Icon` 组件)
--->
+ * @FileDesc: load盒子组件(基于 vant 的 `Loading`、`Icon` 组件)
+ -->
 
 <script setup lang="ts">
 defineOptions({

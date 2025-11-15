@@ -1,11 +1,6 @@
 <!--
- * @Author: dyb-dev
- * @Date: 2024-09-02 14:15:13
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-22 15:41:16
- * @FilePath: /vant-pro/src/components/CalendarPro/index.vue
- * @Description: 日历组件增强版(基于 vant 的 `Calendar` 组件)
--->
+ * @FileDesc: 日历组件增强版(基于 vant 的 `Calendar` 组件)
+ -->
 
 <script setup lang="tsx">
 defineOptions({

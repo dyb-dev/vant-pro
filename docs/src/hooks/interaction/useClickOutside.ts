@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2025-08-16 13:19:57
- * @LastEditors: dyb-dev
- * @LastEditTime: 2025-08-16 13:20:14
- * @FilePath: /vant-pro/docs/src/hooks/interaction/useClickOutside.ts
- * @Description: 使用监听目标元素外部的点击事件
+ * @FileDesc: 使用监听目标元素外部的点击事件
  */
 
 import { isRef, onMounted, onUnmounted, nextTick } from "vue"

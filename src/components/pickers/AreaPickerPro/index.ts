@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-06 23:15:42
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-10 23:54:50
- * @FilePath: /vant-pro/src/components/picker/AreaPickerPro/index.ts
- * @Description: 地区选择器增强版组件(基于 vant 的 `Popup`、`Area`、`Loading` 组件)
+ * @FileDesc: 地区选择器增强版组件(基于 vant 的 `Popup`、`Area`、`Loading` 组件)
  */
 
 import { withInstall } from "#/utils"

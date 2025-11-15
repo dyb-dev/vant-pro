@@ -1,11 +1,6 @@
 <!--
- * @Author: dyb-dev
- * @Date: 2024-09-03 16:37:34
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 13:52:42
- * @FilePath: /vant-pro/src/components/TransitionPro/index.vue
- * @Description: 过渡动画组件增强版(基于 `Vue3` 的 `Transition`、`TransitionGroup` 组件)
--->
+ * @FileDesc: 过渡动画组件增强版(基于 `Vue3` 的 `Transition`、`TransitionGroup` 组件)
+ -->
 
 <script setup lang="tsx">
 defineOptions({

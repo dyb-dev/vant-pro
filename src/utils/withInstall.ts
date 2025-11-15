@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-08-31 23:44:01
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:32:23
- * @FilePath: /vant-pro/src/utils/withInstall.ts
- * @Description: 组件注册的辅助函数
+ * @FileDesc: 组件注册的辅助函数
  */
 
 import type { App, Component } from "vue"

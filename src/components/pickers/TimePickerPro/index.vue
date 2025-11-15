@@ -1,11 +1,6 @@
 <!--
- * @Author: dyb-dev
- * @Date: 2024-09-09 14:22:58
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 16:53:51
- * @FilePath: /vant-pro/src/components/pickers/TimePickerPro/index.vue
- * @Description: 时间选择器增强版组件(基于 vant 的 `Popup`、`TimePicker`、`Loading` 组件)
--->
+ * @FileDesc: 时间选择器增强版组件(基于 vant 的 `Popup`、`TimePicker`、`Loading` 组件)
+ -->
 
 <script setup lang="ts">
 defineOptions({

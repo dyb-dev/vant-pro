@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-06 23:15:42
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-09 16:11:45
- * @FilePath: /vant-pro/src/components/picker/TimePickerPro/index.ts
- * @Description: 时间选择器增强版组件(基于 vant 的 `Popup`、`TimePicker`、`Loading` 组件)
+ * @FileDesc: 时间选择器增强版组件(基于 vant 的 `Popup`、`TimePicker`、`Loading` 组件)
  */
 
 import { withInstall } from "#/utils"

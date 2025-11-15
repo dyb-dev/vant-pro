@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-10-16 01:08:35
- * @LastEditors: dyb-dev
- * @LastEditTime: 2025-08-02 19:25:14
- * @FilePath: /vant-pro/docs/src/utils/env/index.ts
- * @Description: 环境相关工具函数
+ * @FileDesc: 环境相关工具函数
  */
 
 import { getCurrentUrlQueryValue } from "@/utils"

@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-09-07 21:22:56
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 16:54:32
- * @FilePath: /vant-pro/src/components/pickers/index.ts
- * @Description: 选择器增强版组件模块
+ * @FileDesc: 选择器增强版组件模块
  */
 
 /** 导出地区选择器增强版组件 */

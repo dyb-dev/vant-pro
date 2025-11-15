@@ -1,10 +1,5 @@
 /*
- * @Author: dyb-dev
- * @Date: 2024-08-31 22:32:21
- * @LastEditors: v_zhgtzhong
- * @LastEditTime: 2025-08-01 00:36:51
- * @FilePath: /vant-pro/docs/src/utils/url/index.ts
- * @Description: url相关工具函数
+ * @FileDesc: url相关工具函数
  */
 
 import queryString from "query-string"

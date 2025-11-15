@@ -1,11 +1,6 @@
 <!--
- * @Author: dyb-dev
- * @Date: 2024-09-04 15:52:38
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-10 21:02:13
- * @FilePath: /vant-pro/src/components/ListPro/index.vue
- * @Description: 列表分页组件增强版(基于 vant 的 `PullRefresh`、`List`、`BackTop`、`Empty`、`Highlight` 组件)
--->
+ * @FileDesc: 列表分页组件增强版(基于 vant 的 `PullRefresh`、`List`、`BackTop`、`Empty`、`Highlight` 组件)
+ -->
 
 <script setup lang="tsx">
 defineOptions({
