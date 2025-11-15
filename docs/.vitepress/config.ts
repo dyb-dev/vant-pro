@@ -7,6 +7,7 @@ import { resolve } from "path"
 import ViteVueJsxPlugin from "@vitejs/plugin-vue-jsx"
 import { containerPreview, componentPreview } from "@vitepress-demo-preview/plugin"
 import { getPort } from "portfinder-sync"
+import UnoCSS from "unocss/vite"
 import ViteMkcertPlugin from "vite-plugin-mkcert"
 import { defineConfig, loadEnv } from "vitepress"
 
@@ -206,7 +207,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
 
         // markdown-it配置（作用于`markdown`文件）
         markdown: {
-            config(md) {
+            config (md) {
 
                 // 支持使用 :::preview 容器预览vue组件
                 md.use(<any>containerPreview)
@@ -273,6 +274,8 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
             plugins: [
                 // 处理和编译 .vue jsx/tsx 文件
                 ViteVueJsxPlugin(),
+                // 处理原子 css 提取
+                UnoCSS(),
                 // 是否使用 PWA 离线访问 当 preview 时，带有路径前缀，则浏览器地址栏需要添加 index.html，因为PWA的缓存路径带有index.html，否则离线刷新页面会出现404
                 VITE_PWA === "true" &&
                     setupVitePWAPlugin({

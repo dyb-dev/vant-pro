@@ -15,6 +15,7 @@ import Layout from "./Layout.vue"
 
 import type { Theme } from "vitepress"
 
+import "virtual:uno.css"
 // 引入打包后的组件库样式
 import "@dyb-dev/vant-pro/dist/style.css"
 import "vant/lib/index.css"
@@ -32,7 +33,7 @@ export default {
     // 执行时机在 Vue 应用实例创建后但在挂载到 DOM 之前
     // app: Vue 应用实例 router: Vue Router 实例 siteData: 站点元数据
     // 用于扩展应用、注册路由守卫等等
-    async enhanceApp({ app }) {
+    async enhanceApp ({ app }) {
 
         app.component("demo-preview", AntDesignContainer)
 

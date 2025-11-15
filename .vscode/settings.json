@@ -392,7 +392,8 @@
         "Weixin",
         "zepto",
         "vant",
-        "poppable"
+        "poppable",
+        "unocss"
     ],
 
     // #endregion
