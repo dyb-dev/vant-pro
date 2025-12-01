@@ -99,9 +99,9 @@ export default defineConfig({
                 // 使用最新的 js API编译
                 api: "modern-compiler",
                 additionalData: `
-                    @use "${projectRootDir}/src/styles/scss-var.scss" as *;
-                    @use "${projectRootDir}/src/styles/mixins/index.scss" as *;
-                    @use "${projectRootDir}/src/styles/funs/index.scss" as *;
+                    @use "~/styles/scss-var.scss" as *;
+                    @use "~/styles/mixins/index.scss" as *;
+                    @use "~/styles/funs/index.scss" as *;
                 `
             }
         }
@@ -110,7 +110,7 @@ export default defineConfig({
     resolve: {
         // 路径别名
         alias: {
-            "#": resolve(projectRootDir, "./src")
+            "~": resolve(projectRootDir, "./src")
         },
         // 导入时想要省略的扩展名集合
         extensions: [".js", ".ts", ".jsx", ".tsx", ".json", ".mjs", ".mts", ".cjs", ".cts"],

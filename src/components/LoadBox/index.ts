@@ -2,7 +2,7 @@
  * @FileDesc: load盒子组件(基于 vant 的 `Loading`、`Icon` 组件)
  */
 
-import { withInstall } from "#/utils"
+import { withInstall } from "~/utils"
 
 import _LoadBox from "./index.vue"
 

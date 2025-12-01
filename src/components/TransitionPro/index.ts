@@ -2,7 +2,7 @@
  * @FileDesc: 过渡动画组件增强版(基于 `Vue3` 的 `Transition`、`TransitionGroup` 组件)
  */
 
-import { withInstall } from "#/utils"
+import { withInstall } from "~/utils"
 
 import _TransitionPro from "./index.vue"
 

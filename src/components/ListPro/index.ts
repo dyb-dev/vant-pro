@@ -2,7 +2,7 @@
  * @FileDesc: 列表分页组件增强版(基于 vant 的 `PullRefresh`、`List`、`BackTop`、`Empty`、`Highlight` 组件)
  */
 
-import { withInstall } from "#/utils"
+import { withInstall } from "~/utils"
 
 import _ListPro from "./index.vue"
 

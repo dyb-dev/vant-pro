@@ -2,7 +2,7 @@
  * @FileDesc: 选择器增强版组件(基于 vant 的 `Popup`、`Picker`、`Search`、`Loading`、`Icon` 组件)
  */
 
-import { withInstall } from "#/utils"
+import { withInstall } from "~/utils"
 
 import _PickerPro from "./index.vue"
 

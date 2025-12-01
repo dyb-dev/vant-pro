@@ -11,7 +11,7 @@ import {
     ListPro,
     LoadBox,
     TransitionPro
-} from "#/components"
+} from "~/components"
 
 import type { App } from "vue"
 
@@ -47,5 +47,5 @@ export default {
     install
 }
 
-export * from "#/components"
-export * from "#/utils"
+export * from "~/components"
+export * from "~/utils"

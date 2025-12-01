@@ -2,7 +2,7 @@
  * @FileDesc: 日历组件增强版(基于 vant 的 `Calendar` 组件)
  */
 
-import { withInstall } from "#/utils"
+import { withInstall } from "~/utils"
 
 import _CalendarPro from "./index.vue"
 

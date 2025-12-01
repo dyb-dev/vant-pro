@@ -12,7 +12,7 @@ import { useVModels } from "@vueuse/core"
 import { Popup, Search, Picker, Loading, Icon } from "vant"
 import { watch, onMounted, ref, computed } from "vue"
 
-import { debounce } from "#/utils"
+import { debounce } from "~/utils"
 
 import type { TPickerProBaseActionType, TPickerProBaseSelectedResult, TPickerProBaseUnmountParam } from "../type"
 import type { PickerFieldNames, PickerOption, PickerColumn } from "vant"
@@ -250,7 +250,7 @@ const onClickTip = () => {
  *
  * @param params 选择的参数
  */
-const onClickConfirmButton = async(params: TPickerProBaseSelectedResult) => {
+const onClickConfirmButton = async (params: TPickerProBaseSelectedResult) => {
 
     pickerValue.value = params.selectedValues
     selectedResult.value = { ...selectedResult.value, ...params }
@@ -269,7 +269,7 @@ const onClickConfirmButton = async(params: TPickerProBaseSelectedResult) => {
  *
  * @param params 选择的参数
  */
-const onClickCancelButton = async(params: TPickerProBaseSelectedResult) => {
+const onClickCancelButton = async (params: TPickerProBaseSelectedResult) => {
 
     selectedResult.value = { ...selectedResult.value, ...params }
 
@@ -283,7 +283,7 @@ const onClickCancelButton = async(params: TPickerProBaseSelectedResult) => {
 }
 
 /** FUN: 加载选择器数据 并且 设置当前选中的值 */
-const loadData = async() => {
+const loadData = async () => {
 
     if (props.fetchDataFn) {
 
@@ -346,7 +346,7 @@ watch(searchKeyWords, () => {
  * @param actionType 操作类型
  * @returns 是否关闭成功
  */
-const close = async(actionType: TPickerProBaseActionType = "cancel") => {
+const close = async (actionType: TPickerProBaseActionType = "cancel") => {
 
     if (isBeforeClose.value) {
 

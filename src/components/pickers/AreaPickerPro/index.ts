@@ -2,7 +2,7 @@
  * @FileDesc: 地区选择器增强版组件(基于 vant 的 `Popup`、`Area`、`Loading` 组件)
  */
 
-import { withInstall } from "#/utils"
+import { withInstall } from "~/utils"
 
 import _AreaPickerPro from "./index.vue"
 

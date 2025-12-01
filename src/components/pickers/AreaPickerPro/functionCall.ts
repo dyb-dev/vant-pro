@@ -2,12 +2,12 @@
  * @FileDesc: 函数式调用模块
  */
 
-import { mountComponent } from "#/utils"
+import { mountComponent } from "~/utils"
 
 import AreaPickerPro from "./index.vue"
 
-import type { TFilteredDefaultOptions } from "#/utils"
 import type { IAreaPickerProProps, TAreaPickerProUnmountParam } from "./index.vue"
+import type { TFilteredDefaultOptions } from "~/utils"
 
 /** 显示地区选择器的选项 */
 export type TShowAreaPickerProOptions = TFilteredDefaultOptions<Omit<IAreaPickerProProps, "pickerValue">>

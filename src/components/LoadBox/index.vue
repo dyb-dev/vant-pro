@@ -12,7 +12,7 @@ import { useVModel } from "@vueuse/core"
 import { Loading, Icon } from "vant"
 import { computed } from "vue"
 
-import TransitionPro from "#/components/TransitionPro"
+import TransitionPro from "~/components/TransitionPro"
 
 import type { LoadingType } from "vant"
 

@@ -11,7 +11,7 @@ defineOptions({
 import { PullRefresh, List, BackTop, Empty, Highlight } from "vant"
 import { computed, nextTick, onMounted, ref, useSlots, watchEffect } from "vue"
 
-import TransitionPro from "#/components/TransitionPro"
+import TransitionPro from "~/components/TransitionPro"
 
 import { useListPagination } from "./hooks/useListPagination"
 

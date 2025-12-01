@@ -32,7 +32,7 @@
         // 配置路径映射，简化模块导入路径
         "paths": {
             "@/*": ["./docs/src/*"],
-            "#/*": ["./src/*"],
+            "~/*": ["./src/*"],
             // 解决`@vitepress-demo-preview`插件ts声明文件找不到的问题
             "@vitepress-demo-preview/component": ["./node_modules/@vitepress-demo-preview/component/dist/index.d.ts"]
         }

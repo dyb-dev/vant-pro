@@ -256,9 +256,9 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                         // 使用最新的 js API编译
                         api: "modern-compiler",
                         additionalData: `
-                            @use "${projectRootDir}/src/styles/scss-var.scss" as *;
-                            @use "${projectRootDir}/src/styles/mixins/index.scss" as *;
-                            @use "${projectRootDir}/src/styles/funs/index.scss" as *;
+                            @use "@/styles/scss-var.scss" as *;
+                            @use "@/styles/mixins/index.scss" as *;
+                            @use "@/styles/funs/index.scss" as *;
                         `
                     }
                 }

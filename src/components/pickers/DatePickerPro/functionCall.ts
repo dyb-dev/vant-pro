@@ -2,13 +2,13 @@
  * @FileDesc: 函数式调用模块
  */
 
-import { mountComponent } from "#/utils"
+import { mountComponent } from "~/utils"
 
 import DatePickerPro from "./index.vue"
 
-import type { TFilteredDefaultOptions } from "#/utils"
 import type { IDatePickerProProps } from "./index.vue"
 import type { TShowPickerProBaseResult } from "../type"
+import type { TFilteredDefaultOptions } from "~/utils"
 
 /** 显示日期选择器增强版的选项 */
 export type TShowDatePickerProOptions = TFilteredDefaultOptions<IDatePickerProProps>
