@@ -19,10 +19,6 @@
         "types": ["@dyb-dev/ts-config/types"],
         // 指定用于存储 TypeScript 编译器在增量编译模式下生成的编译信息的文件路径，以便下次编译时可以使用
         "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-        // 指定生成 ECMAScript Next 模块系统的代码
-        "module": "ESNext",
-        // 指定模块解析策略
-        "moduleResolution": "Bundler",
         // 配置路径映射，简化模块导入路径
         "paths": {
             // 解决`@vitepress-demo-preview`插件ts声明文件找不到的问题
