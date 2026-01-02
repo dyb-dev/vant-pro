@@ -26,7 +26,7 @@ const data: IData = reactive({
 const cellPhoneBox = ref<InstanceType<typeof CellPhoneBox>>()
 
 /** EVENT: 函数式调用 */
-const onClickButton1 = async() => {
+const onClickButton1 = async () => {
 
     const _result = await showCalendarPro({
         defaultDate: data.selectDate,
@@ -46,7 +46,7 @@ const onClickButton1 = async() => {
 const show = ref(false)
 
 /** EVENT: 组件式调用 */
-const onClickButton2 = async() => {
+const onClickButton2 = async () => {
 
     show.value = true
 

@@ -35,7 +35,7 @@ const BOX_MAX_HEIGHT = 667
 const boxHeight = ref<number>(BOX_MAX_HEIGHT)
 
 /** LIFECYCLE: 渲染 */
-onMounted(async() => {
+onMounted(async () => {
 
     await nextTick()
 

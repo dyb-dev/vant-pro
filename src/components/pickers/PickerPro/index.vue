@@ -15,7 +15,7 @@ import { watch, onMounted, ref, computed } from "vue"
 import { debounce } from "~/utils"
 
 import type { TPickerProBaseActionType, TPickerProBaseSelectedResult, TPickerProBaseUnmountParam } from "../type"
-import type { PickerFieldNames, PickerOption, PickerColumn } from "vant"
+import type { PickerFieldNames, PickerOption } from "vant"
 
 /** 请求 Picker 数据函数的参数 */
 export type TPickerProFetchDataFnParam = {
@@ -425,7 +425,7 @@ const close = async (actionType: TPickerProBaseActionType = "cancel") => {
             :visible-option-num="props.visibleOptionNum"
             :allow-html="props.allowHtml"
             :loading="loadStatus === 'loading'"
-            :columns="<PickerColumn>columns"
+            :columns="columns"
             :readonly="isBeforeClose"
             :show-toolbar="true"
             @cancel="onClickCancelButton"

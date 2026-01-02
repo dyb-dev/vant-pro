@@ -40,7 +40,7 @@ export const useListPagination = <T extends TPaginationDataItem>(
      * @author dyb-dev
      * @date 06/09/2024/  22:24:56
      */
-    const clearRefresh = async() => {
+    const clearRefresh = async () => {
 
         _pagination.currentTotalDataMap.value.clear()
         _pagination.totalSize.value = 0
@@ -55,7 +55,7 @@ export const useListPagination = <T extends TPaginationDataItem>(
      * @author dyb
      * @date 05/09/2024/  13:16:57
      */
-    const next = async() => {
+    const next = async () => {
 
         try {
 

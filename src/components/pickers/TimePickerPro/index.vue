@@ -224,7 +224,7 @@ onMounted(() => {
  *
  * @param params 选择的参数
  */
-const onClickConfirmButton = async(params: TPickerProBaseSelectedResult) => {
+const onClickConfirmButton = async (params: TPickerProBaseSelectedResult) => {
 
     pickerValue.value = params.selectedValues as string[]
     selectedResult.value = { ...selectedResult.value, ...params }
@@ -243,7 +243,7 @@ const onClickConfirmButton = async(params: TPickerProBaseSelectedResult) => {
  *
  * @param params 选择的参数
  */
-const onClickCancelButton = async(params: TPickerProBaseSelectedResult) => {
+const onClickCancelButton = async (params: TPickerProBaseSelectedResult) => {
 
     selectedResult.value = { ...selectedResult.value, ...params }
 
@@ -262,7 +262,7 @@ const onClickCancelButton = async(params: TPickerProBaseSelectedResult) => {
  * @param actionType 动作类型
  * @returns {boolean} 是否关闭成功
  */
-const close = async(actionType: TPickerProBaseActionType = "cancel"): Promise<boolean> => {
+const close = async (actionType: TPickerProBaseActionType = "cancel"): Promise<boolean> => {
 
     if (isBeforeClose.value) {
 
@@ -378,8 +378,8 @@ const formatter = (type: TimePickerColumnType, option: PickerOption): PickerOpti
             :max-second="props.maxSecond"
             :min-time="props.minTime"
             :max-time="props.maxTime"
-            :formatter="<any>formatter"
-            :filter="<any>props.filter"
+            :formatter="formatter"
+            :filter="props.filter"
             :title="props.title"
             :option-height="props.optionHeight"
             :swipe-duration="props.swipeDuration"

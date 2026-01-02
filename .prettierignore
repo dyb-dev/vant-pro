@@ -18,6 +18,7 @@ dev*
 cache
 dist
 node_modules
+docs/src/assets/
 public
 src/assets/
 unpackage

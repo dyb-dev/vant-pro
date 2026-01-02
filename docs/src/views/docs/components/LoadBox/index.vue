@@ -23,7 +23,7 @@ const data: IData = reactive({
 /**
  * 加载函数
  */
-const load = async() => {
+const load = async () => {
 
     data.loadStatus = "loading"
     await delay(1000)

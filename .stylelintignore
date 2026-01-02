@@ -18,16 +18,21 @@ dev*
 cache
 dist
 node_modules
+docs/src/assets/
 public
 src/assets/
 unpackage
+LICENSE
 .*
 *.json
 *.yaml
 *.md
+*.tsx
 *.ts
 *.d.ts
 *.*js
+*.html
+*.ico
 
 # 不忽略的项目文件
 !.vitepress

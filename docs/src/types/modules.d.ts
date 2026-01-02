@@ -1,13 +1,13 @@
 /** 定义vue文件导入模块，避免ts解析报错 */
 declare module "*.vue" {
-    import { defineComponent } from "vue"
+    import type { defineComponent } from "vue"
     const Component: ReturnType<typeof defineComponent>
     export default Component
 }
 
 /** 定义vue3-json-viewer组件类型 */
 declare module "vue3-json-viewer" {
-    import { AllowedComponentProps, App, Component, ComponentCustomProps, VNodeProps } from "vue"
+    import type { AllowedComponentProps, App, Component, ComponentCustomProps, VNodeProps } from "vue"
 
     interface JsonViewerProps {
         /** 显示数据 */

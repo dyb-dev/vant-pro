@@ -228,7 +228,7 @@ onMounted(() => {
  *
  * @param params 选择的参数
  */
-const onClickConfirmButton = async(params: TAreaPickerProSelectedResult) => {
+const onClickConfirmButton = async (params: TAreaPickerProSelectedResult) => {
 
     pickerValue.value = params.selectedValues
     selectedResult.value = { ...selectedResult.value, ...params }
@@ -248,7 +248,7 @@ const onClickConfirmButton = async(params: TAreaPickerProSelectedResult) => {
  *
  * @param params 选择的参数
  */
-const onClickCancelButton = async(params: TAreaPickerProSelectedResult) => {
+const onClickCancelButton = async (params: TAreaPickerProSelectedResult) => {
 
     selectedResult.value = { ...selectedResult.value, ...params }
 
@@ -267,7 +267,7 @@ const onClickCancelButton = async(params: TAreaPickerProSelectedResult) => {
  * @param actionType 动作类型
  * @returns {boolean} 是否关闭成功
  */
-const close = async(actionType: TPickerProBaseActionType = "cancel"): Promise<boolean> => {
+const close = async (actionType: TPickerProBaseActionType = "cancel"): Promise<boolean> => {
 
     if (isBeforeClose.value) {
 
@@ -344,7 +344,7 @@ const close = async(actionType: TPickerProBaseActionType = "cancel"): Promise<bo
             :swipe-duration="props.swipeDuration"
             :columns-placeholder="props.columnsPlaceholder"
             :visible-option-num="props.visibleOptionNum"
-            :area-list="<AreaList>areaList"
+            :area-list="areaList"
             :readonly="isBeforeClose"
             :columns-num="areaType"
             @cancel="onClickCancelButton"

@@ -149,7 +149,7 @@ const text = computed(() => {
                     class="vant-pro-load-box__loading"
                     :color="props.color"
                     :text-color="props.color"
-                    :type="<LoadingType>icon"
+                    :type="icon"
                     vertical
                 >{{ text }}</Loading>
             </TransitionPro>

@@ -355,7 +355,7 @@ onMounted(() => {
  *
  * @param date 当前日期
  */
-const onSelect = async(date: TCalendarProSelectDate) => {
+const onSelect = async (date: TCalendarProSelectDate) => {
 
     if (props.select && typeof props.select === "function") {
 
@@ -377,7 +377,7 @@ const onSelect = async(date: TCalendarProSelectDate) => {
  *
  * @param date 当前日期
  */
-const onConfirm = async(date: TCalendarProSelectDate) => {
+const onConfirm = async (date: TCalendarProSelectDate) => {
 
     if (props.confirm && typeof props.confirm === "function") {
 

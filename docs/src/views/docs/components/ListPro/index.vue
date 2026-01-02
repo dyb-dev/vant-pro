@@ -27,7 +27,7 @@ const data = ref<User[]>(Array.from({ length: 30 }, (_, i) => ({ id: i, name: `u
  * @param {IPaginationFetchDataFnParam} param 参数，包括当前页码和当前页大小
  * @returns {Promise<TPaginationFetchDataFnReturn<User>>} 返回包含当前页数据和总大小的对象
  */
-const fetchDataFn = async({ currentPage, currentPageSize }: IPaginationFetchDataFnParam): TPaginationFetchDataFnReturn<User> => {
+const fetchDataFn = async ({ currentPage, currentPageSize }: IPaginationFetchDataFnParam): TPaginationFetchDataFnReturn<User> => {
 
     const _start = (currentPage - 1) * currentPageSize
     const _end = _start + currentPageSize
@@ -70,13 +70,13 @@ const delay = (ms: number): Promise<void> => {
                 <template #default="{ boxElement }">
                     <ListPro ref="listPro" :fetch-data-fn="fetchDataFn" :back-top-props="{ teleport: boxElement }">
                         <template #default="{ currentTotalData }">
-                            <Cell v-for="(item, index) in <User[]>currentTotalData" :key="index" :title="item.name" />
+                            <Cell v-for="(item, index) in currentTotalData as User[]" :key="index" :title="item.name" />
                         </template>
                     </ListPro>
                 </template>
             </CellPhoneBox>
 
-            <JsonViewer :value="<InstanceType<typeof ListPro>>listPro" :expand-depth="1" />
+            <JsonViewer :value="listPro" :expand-depth="1" />
         </Space>
     </App>
 </template>

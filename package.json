@@ -1,6 +1,6 @@
 {
     "name": "@dyb-dev/vant-pro",
-    "version": "0.4.3",
+    "version": "0.5.0",
     "description": "基于 Vue3 + TS + Vant 二次封装的移动端组件库",
     "author": "dyb-dev",
     "license": "MIT",
@@ -36,7 +36,8 @@
         "docs:build-only": "vitepress build docs",
         "docs:preview": "vitepress preview docs",
         "docs:ts-check": "vue-tsc --build --force",
-        "release": "project-cli release"
+        "release": "project-cli release",
+        "format": "prettier --write . && eslint --fix . && stylelint --fix . --allow-empty-input"
     },
     "engines": {
         "node": ">=18.0.0",
@@ -91,6 +92,7 @@
         "es-toolkit": "^1.41.0",
         "eslint": "^8.57.1",
         "husky": "^9.1.6",
+        "lint-staged": "^16.2.7",
         "lunar-javascript": "^1.6.12",
         "portfinder-sync": "^0.0.2",
         "prettier": "^3.3.3",
@@ -121,5 +123,12 @@
         "@vueuse/core": "^11.0.3",
         "vant": "^4.9.4",
         "vue": "^3.4.30"
+    },
+    "lint-staged": {
+        "*": [
+            "prettier --write",
+            "eslint --fix",
+            "stylelint --fix --allow-empty-input"
+        ]
     }
 }
