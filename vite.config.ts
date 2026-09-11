@@ -1,4 +1,4 @@
-import { resolve } from "path"
+import { resolve } from "node:path"
 
 import ViteVue from "@vitejs/plugin-vue"
 import ViteVueJsx from "@vitejs/plugin-vue-jsx"

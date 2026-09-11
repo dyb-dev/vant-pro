@@ -2,12 +2,14 @@
  * @FileDesc: VitePress 配置
  */
 
-import { resolve } from "path"
+import { resolve } from "node:path"
+import { constants } from "node:zlib"
 
 import ViteVueJsxPlugin from "@vitejs/plugin-vue-jsx"
 import { containerPreview, componentPreview } from "@vitepress-demo-preview/plugin"
 import { getPort } from "portfinder-sync"
 import UnoCSS from "unocss/vite"
+import { compression, defineAlgorithm } from "vite-plugin-compression2"
 import ViteMkcertPlugin from "vite-plugin-mkcert"
 import { defineConfig, loadEnv } from "vitepress"
 
@@ -290,7 +292,29 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                         source: "coding",
                         // 证书保存路径
                         savePath: resolve(projectRootDir, "./dev-https-cert")
-                    })
+                    }),
+                // 压缩资源插件
+                compression({
+                    // 文件大小压缩阈值
+                    threshold: 1024,
+                    // 算法
+                    algorithms: [
+                        defineAlgorithm("gzip", {
+                            // 压缩级别
+                            level: 9
+                        }),
+                        defineAlgorithm("brotliCompress", {
+                            params: {
+                                // 压缩级别
+                                [constants.BROTLI_PARAM_QUALITY]: 11,
+                                // 滑动窗口大小
+                                [constants.BROTLI_PARAM_LGWIN]: 24,
+                                // 压缩模式
+                                [constants.BROTLI_PARAM_MODE]: constants.BROTLI_MODE_TEXT
+                            }
+                        })
+                    ]
+                })
             ],
 
             server: {

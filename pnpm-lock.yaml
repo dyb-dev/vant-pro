@@ -107,6 +107,9 @@ importers:
       vite:
         specifier: ^5.4.9
         version: 5.4.9(@types/node@24.10.1)(sass@1.80.3)(sugarss@2.0.0)(terser@5.36.0)
+      vite-plugin-compression2:
+        specifier: ^2.5.3
+        version: 2.5.3(rollup@4.24.0)
       vite-plugin-dts:
         specifier: ~4.0.3
         version: 4.0.3(@types/node@24.10.1)(rollup@4.24.0)(typescript@5.6.3)(vite@5.4.9(@types/node@24.10.1)(sass@1.80.3)(sugarss@2.0.0)(terser@5.36.0))
@@ -5483,6 +5486,9 @@ packages:
     resolution: {integrity: sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A==}
     engines: {node: '>=10.0.0'}
 
+  tar-mini@0.2.0:
+    resolution: {integrity: sha512-+qfUHz700DWnRutdUsxRRVZ38G1Qr27OetwaMYTdg8hcPxf46U0S1Zf76dQMWRBmusOt2ZCK5kbIaiLkoGO7WQ==}
+
   temp-dir@2.0.0:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
     engines: {node: '>=8'}
@@ -5825,6 +5831,9 @@ packages:
 
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
+
+  vite-plugin-compression2@2.5.3:
+    resolution: {integrity: sha512-ItPgqQWkcnBbVw7is9OKwiZ8v6+ju9rYROl5Lp6QfQDEx/d55AwJQb/KLpsQqsU9HoigYBsZ8tK6I02UwJNvEw==}
 
   vite-plugin-dts@4.0.3:
     resolution: {integrity: sha512-+xnTsaONwU2kV6zhRjtbRJSGN41uFR/whqmcb4k4fftLFDJElxthp0PP5Fq8gMeM9ytWMt1yk5gGgekLREWYQQ==}
@@ -12262,6 +12271,8 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
+  tar-mini@0.2.0: {}
+
   temp-dir@2.0.0: {}
 
   tempy@0.6.0:
@@ -12681,6 +12692,13 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
+
+  vite-plugin-compression2@2.5.3(rollup@4.24.0):
+    dependencies:
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
+      tar-mini: 0.2.0
+    transitivePeerDependencies:
+      - rollup
 
   vite-plugin-dts@4.0.3(@types/node@24.10.1)(rollup@4.24.0)(typescript@5.6.3)(vite@5.4.9(@types/node@24.10.1)(sass@1.80.3)(sugarss@2.0.0)(terser@5.36.0)):
     dependencies:
