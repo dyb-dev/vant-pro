@@ -1,5 +1,7 @@
 ---
-# https://vitepress.dev/zh/reference/default-theme-home-page
+
+# <https://vitepress.dev/zh/reference/default-theme-home-page>
+
 layout: home
 markdownStyles: true
 
@@ -16,7 +18,7 @@ hero:
           link: /reference/
         - theme: alt
           text: 中文官网
-          link: https://vitepress.dev/zh/
+          link: <https://vitepress.dev/zh/>
 
 features:
     - icon: 🚀
@@ -35,4 +37,5 @@ features:
     #       src: /image/logo.png
     #   title: 功能C
     #   details: 功能详情C
+
 ---
