@@ -21,26 +21,26 @@ import { generateProjectInfo, getAvailableIPv4HostIP, setupVitePWAPlugin } from 
 
 import type { UserConfigFn, DefaultTheme } from "vitepress"
 
-/** CONST: 顶部菜单配置 */
+/** 顶部菜单配置 */
 const nav: DefaultTheme.NavItem[] = [
     { text: "首页", link: "/" },
     { text: "文档", link: docsSidebar.rootFilePath },
     { text: "参考", link: referenceSidebar.rootFilePath }
 ]
 
-/** CONST: 左侧边栏菜单配置 */
+/** 左侧边栏菜单配置 */
 const sidebar: DefaultTheme.Sidebar = { ...docsSidebar.config, ...referenceSidebar.config }
 
-/** CONST: 项目根目录 */
+/** 项目根目录 */
 const projectRootDir = resolve(__dirname, "../")
 
-/** CONST: 是否开发模式 */
+/** 是否开发模式 */
 const isDevMode = process.env.NODE_ENV === "development"
 
 // VitePress配置 示例:(https://vitepress.dev/zh/reference/site-config)
 const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
 
-    /** CONST: 获取.env文件的环境变量 */
+    /** 获取.env文件的环境变量 */
     const _env = loadEnv(mode, resolve(projectRootDir, "../")) as unknown as ImportMetaEnv
 
     const {
@@ -55,25 +55,25 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
         VITE_PWA
     } = _env
 
-    /** CONST: 项目信息 */
+    /** 项目信息 */
     const __PROJECT_INFO__ = generateProjectInfo(_env)
 
-    /** CONST: 路径参数 */
+    /** 路径参数 */
     const _query = `?version=${__PROJECT_INFO__.version}`
 
-    /** CONST: logo路径 需要加版本号保证PWA模式下正常离线缓存 */
+    /** logo路径 需要加版本号保证PWA模式下正常离线缓存 */
     const _logoPath = `/image/logo.png${_query}`
 
-    /** CONST: 图标路径前缀 */
+    /** 图标路径前缀 */
     const _faviconPathPrefix = isDevMode ? "" : VITE_BASE_PATH
 
-    /** CONST: favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
+    /** favicon路径 需要加版本号保证PWA模式下正常离线缓存 */
     const _faviconPath = `${_faviconPathPrefix}/image/favicon.ico${_query}`
 
-    /** CONST: 端口号 */
+    /** 端口号 */
     const _port = getPort(~~VITE_PORT)
 
-    /** CONST: 浏览器打开地址 */
+    /** 浏览器打开地址 */
     const _browserOpenUrl = `${VITE_PROTOCOL}://${getAvailableIPv4HostIP()}:${_port}`
 
     return defineConfig({

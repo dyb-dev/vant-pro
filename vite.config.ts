@@ -7,7 +7,7 @@ import ViteDts from "vite-plugin-dts"
 
 import pkg from "./package.json"
 
-/** CONST: 项目根目录 */
+/** 项目根目录 */
 const projectRootDir = process.cwd()
 
 export default defineConfig({
